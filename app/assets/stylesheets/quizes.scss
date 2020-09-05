@@ -1,0 +1,237 @@
+// Place all the styles related to the quizes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+//quiz/showpage
+
+.quizes-show {
+    background-image: url("/forest.png");
+    background-color: rgba(255, 255, 255, 0.4);
+    background-blend-mode: lighten;
+    height: 800px;
+    padding-top: 15px;
+    width: 100%;
+    font-family: 'Comic Sans MS', 'YuGothic', sans-serif;
+}
+
+.quizes-show-top {
+    margin: 10px auto;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.quizes-show-stock {
+    text-align: right;
+}
+
+.like-btn {
+    margin-right: 25px;
+    color: #8899a6;
+}
+
+.like-btn-unlike {
+    margin-right: 25px;
+    color: #fac002;
+}
+
+
+.quizes-show-top h2 {
+    font-size: 20px;
+    color: rgb(34, 129, 129);
+    text-align: left;
+}
+
+.quizes-show-quiz-content {
+    margin: 5px 0px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 30px;
+    display: block;
+    text-align: left;
+}
+
+.quizes-show-image {
+    width: 260px;
+    margin-bottom: 5px;
+}
+
+.quizes-show-list ul{
+    list-style: none;
+}
+
+.quizes-show-each {
+    width: 250px;
+    height: 50px;
+    margin: 5px 0px;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(238, 238, 238, 0.342);
+    font-family: 'Comic Sans MS', 'YuGothic', sans-serif;
+    white-space: normal;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.29);
+}
+
+.quizes-show-correct-message {
+    display: none;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+}
+
+.quizes-show-correct {
+    display: none;
+    margin: 10px 0px 10px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+}
+
+.quizes-show-explanation{
+    display: none;
+    margin: 5px 0px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    text-decoration: underline;
+    text-align: left;
+}
+
+.quizes-show-explanation-content {
+    display: none;
+    margin: 10px 0px 10px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+}
+
+.quizes-show-twitter {
+    text-align: right;
+}
+
+.quizes-show-twitter button {
+    font-size: 12px;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    color: white;
+    background-color:#55acee;
+    border: none;
+    border-radius: 4px;
+    opacity: 0.9;
+}
+
+.quizes-show-twitter button:hover {
+    opacity: 1;
+}
+
+
+.quizes-show-next {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.quizes-show-btn {
+    display: none;
+    text-align: center;
+    font-size: 15px;
+    padding: 8px 10px;
+    color: white;
+    background-color: rgb(143, 189, 155);
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.active {
+    display: block;
+}
+
+.active2 {
+    display: inline-block;
+}
+
+//クイズ新規投稿
+
+.quizes-new {
+    background-color: white;
+    height: 800px;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.quizes-new-error {
+    color: red;
+}
+
+.quizes-new-textform {
+    margin: 10px 0px;
+}
+
+//クイズ編集
+
+.quizes-edit {
+    background-color: white;
+    height: 800px;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.quizes-edit-error {
+    color: red;
+}
+
+.quizes-edit-textform {
+    margin: 10px 0px;
+}
+
+
+.quizes-destroy {
+    background-color: white;
+    height: 800px;
+    padding-top: 100px;
+    text-align: center;
+}
+
+
+// .pages-index {
+//     margin-top: 90px;
+//     background-color: white;
+//     height: 800px;
+//     padding: 20px;
+//     background-image: url("/fujisan.png");
+// }
+
+// .pages-index-top {
+//     margin-top: 250px;
+//     text-align: center;
+// }
+
+// .pages-index-top h3 {
+//     font-size: 35px;
+//     color: white;
+//     opacity: 0.7;
+// }
+
+// .pages-index-btn {
+//     font-size: 30px;
+//     margin-top: 50px;
+//     padding: 15px 20px;
+//     display: inline-block;
+//     color: white;
+//     opacity: 0.4;
+//     background-color: rgb(196, 100, 55);
+//     border-radius: 8px;
+//     text-decoration: none;
+// }
+
+// .pages-index-btn:hover {
+//     opacity: 1;
+// }
+

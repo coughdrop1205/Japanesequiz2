@@ -1,0 +1,104 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+//Sign upページ
+
+.regis-new {
+    background-image: url("/forest.png");
+    background-color: rgba(255, 255, 255, 0.4);
+    background-blend-mode: lighten;
+    height: 800px;
+    padding-top: 30px;
+    width: 100%;
+}
+
+.regis-new-top {
+    margin: 10px auto;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.regis-new-title {
+    margin-bottom: 5px;
+    font-size: 15px;
+    text-align: left;
+    display: block;
+}
+
+.regis-new-field {
+    margin: 10px auto 10px 50px;
+    text-align: left;
+}
+
+.regis-new-btn {
+    text-align: right;
+    margin-right: 50px;
+}
+
+.regis-new-message {
+    text-align: left;
+    margin-top: 15px;
+}
+
+.regis-new-menu {
+    margin: 5px 50px 5px auto;
+    text-align: left;
+}
+
+// User編集ページ
+
+.regis-edit {
+    background-image: url("/forest.png");
+    background-color: rgba(255, 255, 255, 0.4);
+    background-blend-mode: lighten;
+    height: 800px;
+    padding-top: 30px;
+    width: 100%;
+}
+
+.regis-edit-top {
+    margin: 10px auto;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.regis-edit-title {
+    margin-bottom: 5px;
+    font-size: 15px;
+    text-align: left;
+    display: block;
+}
+
+.regis-edit-field {
+    margin: 10px auto 10px 50px;
+    text-align: left;
+}
+
+.regis-edit-btn {
+    text-align: right;
+    margin-right: 50px;
+}
+
+.regis-new-message {
+    text-align: left;
+    margin-top: 15px;
+}
+
+.regis-new-menu {
+    margin: 5px 50px 5px auto;
+    text-align: left;
+}
+
+.regis-edit-title2 {
+    margin: 10px 0;
+    font-size: 15px;
+    text-align: left;
+    display: block;
+}

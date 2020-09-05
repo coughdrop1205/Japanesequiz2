@@ -1,0 +1,12 @@
+<div class="main pages-index">
+    <div class="pages-index-top">
+        <h3>Please select the genre and start the quizzes!!</h3>
+        <div class="pages-index-genre">
+            <%= link_to("Nature", "/quizes/#{@quiz_nature.genre_id}/#{@quiz_nature.subgenre_id}/#{@quiz_nature.level}/#{@quiz_nature.id}", {class: "pages-index-btn"}) %>
+            <%= link_to("Onomatopia", "/quizes/#{@quiz_onoma.genre_id}/#{@quiz_onoma.subgenre_id}/#{@quiz_onoma.level}/#{@quiz_onoma.id}", {class: "pages-index-btn"}) %>
+            <%= link_to("Family", "/quizes/#{@quiz_fam.genre_id}/#{@quiz_fam.subgenre_id}/#{@quiz_fam.level}/#{@quiz_fam.id}", {class: "pages-index-btn"}) %>
+            <%= link_to("Date & time", "/quizes/#{@quiz_date.genre_id}/#{@quiz_date.subgenre_id}/#{@quiz_date.level}/#{@quiz_date.id}", {class: "pages-index-btn"}) %>
+            <%= link_to("Counting", "/quizes/#{@quiz_count.genre_id}/#{@quiz_count.subgenre_id}/#{@quiz_count.level}/#{@quiz_count.id}", {class: "pages-index-btn"}) %>
+        </div>
+    </div>
+</div>

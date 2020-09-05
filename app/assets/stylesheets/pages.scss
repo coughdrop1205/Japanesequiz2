@@ -1,0 +1,167 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+//タイトルページ
+
+.pages-index {
+    margin-top: 0px;
+    background-color: white;
+    height: 800px;
+    padding: 20px;
+    background-image: url("/forest.png");
+}
+
+.pages-index-top {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.pages-index-top h3 {
+    margin-bottom: 50px;
+    font-size: 35px;
+    text-shadow: 2px 2px 4px #363636; 
+    line-height: 40px;
+    color: white;
+    opacity: 0.95;
+}
+
+.pages-index-level {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 40px;
+    color: rgba(72, 201, 13, 0.774);
+}
+
+.pages-index-btn {
+    font-size: 30px;
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    display: inline-block;
+    width: 500px;
+    color: white;
+    opacity: 0.7;
+    background-color: rgb(55, 196, 102);
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.pages-index-btn:hover {
+    opacity: 1;
+}
+
+// Mypage
+
+.pages-show {
+    background-image: url("/forest.png");
+    background-color: rgba(255, 255, 255, 0.4);
+    background-blend-mode: lighten;
+    font-family: 'Comic Sans MS', 'YuGothic', sans-serif;
+    min-height: 700px;
+    max-height: 2000px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+}
+
+.pages-show-top {
+    margin: 10px auto 0px auto ;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.pages-show-title {
+    margin-bottom: 5px;
+    font-size: 12px;
+    text-align: left;
+    display: block;
+}
+
+.pages-show-favorite {
+    font-size: 21px;
+    margin: 10px auto;
+    display: block;
+    color: rgb(14, 99, 80);
+}
+
+.pages-show-each {
+    margin: 10px auto;
+    width: 260px;
+    background-color: rgba(189, 206, 178, 0.15);
+    padding: 10px;
+    text-align: left;
+    border-radius: 4px;
+}
+
+.pages-show-star {
+    text-align: left;
+}
+
+.pages-show-stock {
+    display: block;
+    margin-bottom: 15px;
+    white-space: pre-line;
+    line-height: 20px;
+}
+
+.pages-show-answer {
+    display:none;
+    text-align: center;
+}
+
+.pages-show-image {
+    width: 240px;
+    margin-bottom: 5px;
+}
+
+.pages-show-btn {
+    display: inline-block;
+    margin: 0px 0px 0px 200px;
+    text-align: right;
+    font-size: 15px;
+    color: white;
+    border: none;
+    padding: 3px 6px;
+    background-color: rgba(255, 175, 2, 0.836);
+    border-radius: 8px;
+}
+
+.pages-show-explanation {
+    margin-top: 15px;
+    display: none;
+}
+
+.pages-explanation-btn {
+    display: inline-block;
+    display: none;
+    margin: 0px 0px 0px 200px;
+    text-align: right;
+    font-size: 15px;
+    color: white;
+    border: none;
+    padding: 3px 6px;
+    background-color: rgba(61, 218, 166, 0.836);
+    border-radius: 8px;
+}
+
+.pages-show-change {
+    list-style: none;
+}
+
+.pages-show-change a {
+    float: left;
+    text-decoration: none;
+    color: rgba(59, 59, 59, 0.726);
+}
+
+.active {
+    display: block;
+}
+
+.active2 {
+    display: inline-block;
+}

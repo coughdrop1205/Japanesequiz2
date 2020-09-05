@@ -1,0 +1,11 @@
+var number = "<%=@number%>";
+var explanation = "<%=@explanation%>";
+
+if (explanation) {
+    $(`.c${number}`).addClass('active');
+    $(`.d${number}`).hide();
+} else {
+    $(`.a${number}`).addClass('active');
+    $(`.b${number}`).hide();
+    $(`.d${number}`).addClass('active2');
+}

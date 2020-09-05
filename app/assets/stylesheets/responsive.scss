@@ -1,0 +1,47 @@
+@media (max-width: 750px) {
+
+    /* タイトルページのボタン表示 */
+    .pages-index-btn {
+        width: 100%;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+
+    /* タイトルページの諸々調整 */
+    .pages-index-top {
+        margin-top: 30px;
+    }
+
+    .pages-index-top h3 {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 10px;
+    }
+
+    /* メニューリストを非表示にしてアイコンを表示する */
+    .header-list {
+        display: none;
+    }
+
+    .menu-icon {
+        display: inline-block;
+        float: right;
+        padding: 15px 10px;
+    }
+
+    .is-active {
+        display: inline-block;
+        float: right;
+        font-weight: bolder;
+        background-color:rgba(255,255,255,0.6);
+    }
+
+}
+
+@media (min-width: 750px) {
+
+    /* メニューアイコンを非表示にする */
+    .menu-icon {
+        display: none;
+    }
+}

@@ -1,0 +1,50 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+//Sign upページ
+
+.sessions-new {
+    background-image: url("/forest.png");
+    background-color: rgba(255, 255, 255, 0.4);
+    background-blend-mode: lighten;
+    height: 800px;
+    padding-top: 30px;
+    width: 100%;
+}
+
+.sessions-new-top {
+    margin: 10px auto;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.sessions-new-title {
+    margin-bottom: 5px;
+    font-size: 15px;
+    text-align: left;
+    display: block;
+}
+
+.sessions-new-field {
+    margin: 10px auto 10px 50px;
+    text-align: left;
+}
+
+.sessions-new-btn {
+    text-align: right;
+    margin-right: 50px;
+}
+
+.sessions-new-message {
+    text-align: left;
+    margin-top: 15px;
+}
+
+.sessions-new-menu {
+    margin: 5px 50px 5px auto;
+    text-align: left;
+}

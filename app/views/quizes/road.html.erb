@@ -1,0 +1,72 @@
+<div class="main quizes-show">
+    <div class="quizes-show-top">
+        <!-- タイトルの表示 -->
+        <h2><%= "Quiz #{@quiz.road}" %></h2>
+        <!-- Stockの表示 -->
+        <div class="quizes-show-stock">
+        <% if current_user && Stock.find_by(user_id: current_user.id, quiz_id: @quiz.id) %>
+            <%= link_to("/stocks/#{@quiz.id}/destroy", {method: "post"}) do %>
+                <span class="fa fa-star fa-lg like-btn-unlike"></span>
+            <% end %>
+        <% else %>
+            <%= link_to("/stocks/#{@quiz.id}/create", {method: "post"}) do %>
+                <span class="fa fa-star fa-lg like-btn"></span>
+            <% end %>
+        <% end %>
+        </div>
+        <div class="quizes-show-quiz">
+            <!-- クイズ内容の表示 -->
+            <p class="quizes-show-quiz-content"><%= simple_format(@quiz.content, class: 'quizes-show-quiz-content') %></p>
+            <!-- 入力値送信 -->
+            <%= form_tag("/quizes/#{@quiz.id}/answer", :remote => true) do %>
+                <!-- クイズの画像があれば表示 -->
+                <% if !@quiz.image_name.blank? %>
+                    <img src="<%= "/quizes_image/#{@quiz.image_name}" %>", class="quizes-show-image">
+                <% end %>
+                <!-- 各回答の表示 -->
+                <div class="quizes-show-list">
+                    <% @quiz_list = [@quiz.a, @quiz.b, @quiz.c] %>
+                    <ul>
+                        <% @quiz_list.each_with_index do |quiz, i| %>
+                            <li><input class="quizes-show-each q<%= i %>" type="submit" name="a" value="<%= quiz %>"></li>
+                        <% end %>
+                    </ul>
+                </div>
+            <% end %>
+            <!-- Twitterシェアボタン -->
+            <div class="quizes-show-twitter">
+                <%= link_to "https://twitter.com/share?url=#{request.url}/&text=#{@quiz.content}%0A%0ATo know the answer, please check below%0A%0A@ModernJapanesee" do %>
+                    <button class="fa fa-twitter"> Share</button>
+                <% end %>
+            </div>
+            <!-- 正解不正解表示 -->
+            <div class="quizes-show-correct-message">
+            </div>
+            <div class="quizes-show-correct">
+                <%= @quiz.correct_answer %>
+            </div>
+            <!-- 解説表示 -->
+            <div class="quizes-show-explanation">
+                <p>Explanation</p>
+            </div>
+            <div class="quizes-show-explanation-content">
+                <%= simple_format(@quiz.explanation, class: 'quizes-show-explanation-content2') %>
+            </div>
+            <!-- 次ボタン表示 -->
+            <div class="quizes-show-next">
+                <% if (@quiz.road.to_i < @quizes_array.max.to_i) %>
+                    <%= link_to("Next >>", "/quizes/#{@quiz.level}/#{@quiz.theme}/#{@quiz.road.to_i+1}", {class: "quizes-show-btn"}) %>
+                <% else %>
+                    <%= link_to("Back", "/pages/grammar", {class: "quizes-show-btn"}) %>
+                <% end %>
+            </div>
+            </br>
+            <!-- 管理者のみに表示 -->
+            <% if current_user && current_user.id == 1 %>
+                <!-- 編集・削除表示 -->
+                <%= link_to("Edit", "/quizes/#{@quiz.id}/edit", {class: "quizes-edit-btn"}) %>
+                <%= link_to("Destroy", "/quizes/#{@quiz.id}/destroy", {method:"post", class: "quizes-destroy-btn"}) %>
+            <% end %>
+        </div>
+    </div>
+</div>

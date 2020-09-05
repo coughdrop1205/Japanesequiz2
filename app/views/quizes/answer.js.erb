@@ -1,0 +1,26 @@
+//クイズの選択肢を選んだら解説を表示する
+$('.quizes-show-explanation').addClass('active');
+$('.quizes-show-explanation-content').addClass('active');
+$('.quizes-show-correct-message').addClass('active');
+$('.quizes-show-correct').addClass('active');
+$('.quizes-show-btn').addClass('active2');
+//クイズに正解の場合は青字で、不正解の場合は赤字で表示する
+var answer = '';
+var answer_index = 0;
+$('.quizes-show-each').each(function (i, element) {
+    answer = element.value;
+    if (answer == "<%=@chosen_answer%>") {
+        answer_index = i;
+    }
+});
+<% if @correct == 0 %>
+$(`.q${answer_index}`).css({'color':'rgb(0,158,53)','background-color':'rgba(34, 129, 129, 0.3)'});
+$('.quizes-show-correct-message').text('Correct!!').css('color','rgb(0,158,53)');
+<% else %>
+$(`.q${answer_index}`).css({'color':'red','background-color':'rgba(200, 117, 63, 0.3)'});
+$('.quizes-show-correct-message').text('Incorrect!').css('color', 'red');
+<% end %>
+$('.quizes-show-each').prop('disabled', true);
+
+    
+    
