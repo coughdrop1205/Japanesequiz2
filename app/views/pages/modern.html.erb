@@ -1,12 +1,56 @@
 <div class="main pages-index">
     <div class="pages-index-top">
         <h3>Please select the genre and start the quizzes!!</h3>
-        <div class="pages-index-genre">
-            <%= link_to("Nature", "/quizes/#{@quiz_nature.genre_id}/#{@quiz_nature.subgenre_id}/#{@quiz_nature.level}/#{@quiz_nature.id}", {class: "pages-index-btn"}) %>
-            <%= link_to("Onomatopia", "/quizes/#{@quiz_onoma.genre_id}/#{@quiz_onoma.subgenre_id}/#{@quiz_onoma.level}/#{@quiz_onoma.id}", {class: "pages-index-btn"}) %>
-            <%= link_to("Family", "/quizes/#{@quiz_fam.genre_id}/#{@quiz_fam.subgenre_id}/#{@quiz_fam.level}/#{@quiz_fam.id}", {class: "pages-index-btn"}) %>
-            <%= link_to("Date & time", "/quizes/#{@quiz_date.genre_id}/#{@quiz_date.subgenre_id}/#{@quiz_date.level}/#{@quiz_date.id}", {class: "pages-index-btn"}) %>
-            <%= link_to("Counting", "/quizes/#{@quiz_count.genre_id}/#{@quiz_count.subgenre_id}/#{@quiz_count.level}/#{@quiz_count.id}", {class: "pages-index-btn"}) %>
+            <div class="pages-index-genre">
+                <div class="pages-index-quiz">
+                    <div class="pages-index-title">
+                        <%= @genre1[0].subgenre %>
+                    </div>
+                    <div class="pages-index-subtitle">
+                        <% if @genre1[0].thirdgenre %>
+                            <%= @genre1[0].thirdgenre %>
+                        <% end %>
+                    </div>
+                    <div class="pages-index-level">
+                        <% @genre1.each_with_index do |genre, i| %>
+                            <% @quiz = Quiz.find_by(subgenre_id: genre.sub_id, thirdgenre_id: genre.third_id) %>
+                                <%= link_to("Lv.#{genre.level}", "/quizes/a/#{genre.sub_id}/#{genre.third_id}/#{genre.level}/#{@quiz.id}", {class: "pages-index-btn l#{genre.level}"}) %>
+                        <% end %>
+                    </div>
+                </div>
+                <div class="pages-index-quiz">
+                    <div class="pages-index-title">
+                        <%= @genre7_1[0].subgenre %>
+                    </div>
+                    <div class="pages-index-subtitle">
+                        <% if @genre7_1[0].thirdgenre %>
+                            <%= @genre7_1[0].thirdgenre %>
+                        <% end %>
+                    </div>
+                    <% @genre7_1.each_with_index do |genre, i| %>
+                        <% @quiz = Quiz.find_by(subgenre_id: genre.sub_id, thirdgenre_id: genre.third_id, level: genre.level) %>
+                        <%= link_to("Lv.#{genre.level}", "/quizes/a/#{genre.sub_id}/#{genre.third_id}/#{genre.level}/#{@quiz.id}", {class: "pages-index-btn l#{genre.level}"}) %>
+                    <% end %>
+                    <div class="pages-index-subtitle">
+                        <% if @genre7_2[0].thirdgenre %>
+                            <%= @genre7_2[0].thirdgenre %>
+                        <% end %>
+                    </div>
+                    <% @genre7_2.each_with_index do |genre, i| %>
+                        <% @quiz = Quiz.find_by(subgenre_id: genre.sub_id, thirdgenre_id: genre.third_id, level: genre.level) %>
+                        <%= link_to("Lv.#{genre.level}", "/quizes/a/#{genre.sub_id}/#{genre.third_id}/#{genre.level}/#{@quiz.id}", {class: "pages-index-btn l#{genre.level}"}) %>
+                    <% end %>
+                </div>
+            </ul>
+            <%# <ul>
+                <li> <%= link_to(@genre1[0].subgenre, "/quizes/a/#{@genre1[0].sub_id}/#{@genre1[0].third_id}/1/1", {class: "pages-index-btn"}) %> </li>
+                <%# <li> <%= link_to("Onomatopia", "/quizes/a/#{@quiz_onoma.subgenre_id}/#{@quiz_onoma.level}/#{@quiz_onoma.id}", {class: "pages-index-btn"}) %> </li>
+                <%# <li> <%= link_to("Family", "/quizes/a/#{@quiz_fam.subgenre_id}/#{@quiz_fam.level}/#{@quiz_fam.id}", {class: "pages-index-btn"}) %> </li>
+                <%# <li> <%= link_to("Date & time", "/quizes/a/#{@quiz_date.subgenre_id}/#{@quiz_date.level}/#{@quiz_date.id}", {class: "pages-index-btn"}) %> </li>
+                <%# <li> <%= link_to("Counting(Basic) lv1", "/quizes/a/#{@quiz_count.subgenre_id}/#{@quiz_count.thirdgenre_id}/#{@quiz_count.level}/#{@quiz_count.id}", {class: "pages-index-btn"}) %> </li>
+                <%# <li> <%= link_to("Counting(Basic) lv2", "/quizes/a/#{@quiz_count2.subgenre_id}/#{@quiz_count2.thirdgenre_id}/#{@quiz_count2.level}/#{@quiz_count2.id}", {class: "pages-index-btn"}) %> </li>
+                <%# <li> <%= link_to("Counting(General)", "/quizes/a/#{@quiz_count3.subgenre_id}/#{@quiz_count3.thirdgenre_id}/#{@quiz_count3.level}/#{@quiz_count3.id}", {class: "pages-index-btn"}) %> </li>
+            <%# </ul> %>
         </div>
     </div>
 </div>

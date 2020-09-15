@@ -4,6 +4,7 @@ $('.quizes-show-explanation-content').addClass('active');
 $('.quizes-show-correct-message').addClass('active');
 $('.quizes-show-correct').addClass('active');
 $('.quizes-show-btn').addClass('active2');
+
 //クイズに正解の場合は青字で、不正解の場合は赤字で表示する
 var answer = '';
 var answer_index = 0;
@@ -13,11 +14,24 @@ $('.quizes-show-each').each(function (i, element) {
         answer_index = i;
     }
 });
+
+var answer2 = '';
+var answer_index2 = 0;
+$('.quizes-show-each').each(function (i, element) {
+    answer2 = element.value;
+    if (answer2 == "<%=@quiz.correct_answer%>") {
+        answer_index2 = i;
+    }
+});
+
+//正解のときは選んだ答えを緑表示
 <% if @correct == 0 %>
 $(`.q${answer_index}`).css({'color':'rgb(0,158,53)','background-color':'rgba(34, 129, 129, 0.3)'});
 $('.quizes-show-correct-message').text('Correct!!').css('color','rgb(0,158,53)');
+//不正解のときは選んだ答えを赤表示・正解を緑表示
 <% else %>
 $(`.q${answer_index}`).css({'color':'red','background-color':'rgba(200, 117, 63, 0.3)'});
+$(`.q${answer_index2}`).css({'color':'rgb(0,158,53)','background-color':'rgba(34, 129, 129, 0.3)'});
 $('.quizes-show-correct-message').text('Incorrect!').css('color', 'red');
 <% end %>
 $('.quizes-show-each').prop('disabled', true);

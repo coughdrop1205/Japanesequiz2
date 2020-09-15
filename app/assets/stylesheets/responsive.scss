@@ -1,9 +1,9 @@
+/*スマホ表示*/
 @media (max-width: 750px) {
 
     /* タイトルページのボタン表示 */
     .pages-index-btn {
-        width: 100%;
-        font-size: 20px;
+        font-size: 10px;
         font-weight: bolder;
     }
 
@@ -38,10 +38,12 @@
 
 }
 
+/*PC表示*/
 @media (min-width: 750px) {
 
     /* メニューアイコンを非表示にする */
     .menu-icon {
         display: none;
     }
+
 }

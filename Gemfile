@@ -66,8 +66,7 @@ gem 'audiojs-rails'
 gem 'omniauth'
 gem 'omniauth-facebook'
 
-#日本語ルビ
-gem 'kakasi'
-
 #環境変数
 gem 'dotenv-rails'
+
+gem 'seed_dump'

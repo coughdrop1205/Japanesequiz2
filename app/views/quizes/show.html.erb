@@ -4,15 +4,15 @@
         <h2><%= "Quiz #{@quiz_number}" %></h2>
         <!-- Stockの表示 -->
         <div class="quizes-show-stock">
-        <% if current_user && Stock.find_by(user_id: current_user.id, quiz_id: @quiz.id) %>
-            <%= link_to("/stocks/#{@quiz.id}/destroy", {method: "post"}) do %>
-                <span class="fa fa-star fa-lg like-btn-unlike"></span>
+            <% if current_user && Stock.find_by(user_id: current_user.id, quiz_id: @quiz.id) %>
+                <%= link_to("/stocks/#{@quiz.id}/destroy", {method: "post"}) do %>
+                    <span class="fa fa-star fa-lg like-btn-unlike"></span>
+                <% end %>
+            <% else %>
+                <%= link_to("/stocks/#{@quiz.id}/create", {method: "post"}) do %>
+                    <span class="fa fa-star fa-lg like-btn"></span>
+                <% end %>
             <% end %>
-        <% else %>
-            <%= link_to("/stocks/#{@quiz.id}/create", {method: "post"}) do %>
-                <span class="fa fa-star fa-lg like-btn"></span>
-            <% end %>
-        <% end %>
         </div>
         <div class="quizes-show-quiz">
             <!-- クイズ内容の表示 -->
@@ -23,6 +23,9 @@
                 <% if !@quiz.image_name.blank? %>
                     <img src="<%= "/quizes_image/#{@quiz.image_name}" %>", class="quizes-show-image">
                 <% end %>
+                <!-- 正解不正解表示 -->
+                <div class="quizes-show-correct-message">
+                </div>
                 <!-- 各回答の表示 -->
                 <div class="quizes-show-list">
                     <% @quiz_list = [@quiz.a, @quiz.b, @quiz.c] %>
@@ -39,12 +42,6 @@
                     <button class="fa fa-twitter"> Share</button>
                 <% end %>
             </div>
-            <!-- 正解不正解表示 -->
-            <div class="quizes-show-correct-message">
-            </div>
-            <div class="quizes-show-correct">
-                <%= @quiz.correct_answer %>
-            </div>
             <!-- 解説表示 -->
             <div class="quizes-show-explanation">
                 <p>Explanation</p>
@@ -55,7 +52,7 @@
             <!-- 次ボタン表示 -->
             <div class="quizes-show-next">
                 <% if (@quiz.id < @last_quiz.id) %>
-                    <%= link_to("Next >>", "/quizes/#{@quiz.genre_id}/#{@quiz.subgenre_id}/#{@quiz.level}/#{@quiz.id+1}", {class: "quizes-show-btn"}) %>
+                    <%= link_to("Next >>", "/quizes/#{@quiz.genre_id}/#{@quiz.subgenre_id}/#{@quiz.thirdgenre_id}/#{@quiz.level}/#{@quiz.id+1}", {class: "quizes-show-btn"}) %>
                 <% else %>
                     <%= link_to("Back", "/pages/modern", {class: "quizes-show-btn"}) %>
                 <% end %>

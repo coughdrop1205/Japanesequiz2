@@ -26,25 +26,62 @@
     opacity: 0.95;
 }
 
-.pages-index-level {
-    font-size: 20px;
-    font-weight: bold;
+.pages-index-level p {
+    text-align: center;
+    margin-right: 320px;
+}
+
+.pages-index-genre ul li {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.pages-index-title {
+    display: block;
     text-align: left;
-    line-height: 40px;
-    color: rgba(72, 201, 13, 0.774);
+    color: rgb(2, 138, 58);
+    text-shadow: 3px 3px 2px rgb(175, 252, 131);
+    font-weight: bold;
+    padding: 10px 0px 10px 10px;
+    font-size: 30px;
+    clear: both;
+}
+
+.pages-index-subtitle {
+    display: block;
+    margin-left: 10px;
+    text-align: left;
+    color: rgb(0, 121, 94);
+    font-weight: bold;
+    font-size: 20px;
+    clear: both;
 }
 
 .pages-index-btn {
-    font-size: 30px;
-    margin-bottom: 10px;
-    padding: 15px 20px;
     display: inline-block;
-    width: 500px;
+    float: left;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    padding: 15px 20px;
+    width: 60px;
     color: white;
     opacity: 0.7;
     background-color: rgb(55, 196, 102);
     border-radius: 8px;
     text-decoration: none;
+}
+
+.l1 {
+    background-color: rgb(73, 196, 1);
+}
+
+.l2 {
+    background-color: rgb(177, 196, 1);
+}
+
+.l3 {
+    background-color: rgb(196, 160, 1);
 }
 
 .pages-index-btn:hover {

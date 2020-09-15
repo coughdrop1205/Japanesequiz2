@@ -5,9 +5,11 @@
             <p>Level 1</p>
         </div>
         <div class="pages-index-genre">
-            <%= link_to("Pronoun", "/quizes/#{@quiz_1.level}/#{@quiz_1.theme}/#{@quiz_1.road}", {class: "pages-index-btn"}) %>
-            <%= link_to("Adjective", "/quizes/#{@quiz_2.level}/#{@quiz_2.theme}/#{@quiz_2.road}", {class: "pages-index-btn"}) %>
-            <%= link_to("Verb", "/quizes/#{@quiz_3.level}/#{@quiz_3.theme}/#{@quiz_3.road}", {class: "pages-index-btn"}) %>
+            <ul>
+                <li> <%= link_to("Pronoun", "/quizes/#{@quiz_1.level}/#{@quiz_1.theme}/#{@quiz_1.road}", {class: "pages-index-btn"}) %> </li>
+                <li> <%= link_to("Adjective", "/quizes/#{@quiz_2.level}/#{@quiz_2.theme}/#{@quiz_2.road}", {class: "pages-index-btn"}) %> </li>
+                <li> <%= link_to("Verb", "/quizes/#{@quiz_3.level}/#{@quiz_3.theme}/#{@quiz_3.road}", {class: "pages-index-btn"}) %> </li>
+            </ul>
         </div>
     </div>
 </div>

@@ -51,6 +51,7 @@ test:
 #
 production:
   <<: *default
-  database: japanesequiz_production
-  username: japanesequiz
-  password: <%= ENV['JAPANESEQUIZ_DATABASE_PASSWORD'] %>
+  database: test1
+  username: <%= ENV['DATABASE_DEV_USER'] %>
+  password: <%= ENV['DATABASE_DEV_PASSWORD'] %>
+  host: <%= ENV['DATABASE_DEV_HOST'] %>

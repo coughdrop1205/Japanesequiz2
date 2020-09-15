@@ -10,17 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_04_091250) do
+ActiveRecord::Schema.define(version: 2020_09_11_153126) do
 
-  create_table "goods", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "name", limit: 50, null: false
-    t.integer "price", null: false
-  end
-
-  create_table "quizzes", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "quizzes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "genre_id"
     t.text "subgenre_id"
+    t.text "thirdgenre_id"
     t.text "level"
+    t.text "theme"
     t.text "road"
     t.text "content", null: false
     t.text "correct_answer"
@@ -31,7 +28,6 @@ ActiveRecord::Schema.define(version: 2020_09_04_091250) do
     t.text "image_name"
     t.text "created_at"
     t.text "updated_at"
-    t.integer "theme", null: false
   end
 
   create_table "stocks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -39,6 +35,16 @@ ActiveRecord::Schema.define(version: 2020_09_04_091250) do
     t.integer "quiz_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "subgenres", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "sub_id", null: false
+    t.text "subgenre"
+    t.integer "third_id", null: false
+    t.text "thirdgenre"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "level", null: false
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

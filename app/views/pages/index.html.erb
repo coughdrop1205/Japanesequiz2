@@ -1,13 +1,15 @@
 <div class="main pages-index">
     <div class="pages-index-top">
         <h3>Ths is the place where you can master Japanese! </br> Please select the genre and start the quizzes!!</h3>
-        <div class="pages-index-genre">
-            <%= link_to("Grammar Master", "/pages/grammar", {class: "pages-index-btn"}) %>
-            <%= link_to("Modern phrases", "/pages/modern", {class: "pages-index-btn"}) %>
+    </div>
+    <div class="pages-index-genre">
+        <ul>
+            <li> <%= link_to("Grammar Master", "/pages/grammar", {class: "pages-index-btn"}) %> </li> 
+            <li> <%= link_to("Modern phrases", "/pages/modern", {class: "pages-index-btn"}) %> </li>
             <%# <%= link_to("Useful phrases", "/quizes/#{@genre_c.genre_id}/#{@genre_c.id}", {class: "pages-index-btn"}) %>
             <%# <%= link_to("Saying", "/quizes/#{@genre_d.genre_id}/#{@genre_d.id}", {class: "pages-index-btn"}) %>
             <%# <%= link_to("Animes", "/quizes/#{@genre_e.genre_id}/#{@genre_e.id}", {class: "pages-index-btn"}) %>
             <%# <%= link_to("Grammar", "/quizes/#{@genre_f.genre_id}/#{@genre_f.id}", {class: "pages-index-btn"}) %>
-        </div>
+        </ul>
     </div>
 </div>

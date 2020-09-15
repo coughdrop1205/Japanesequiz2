@@ -1,12 +1,11 @@
-require 'kakasi'
 class QuizesController < ApplicationController
   def show
-    @quiz = Quiz.find_by(genre_id: params[:genre_id], subgenre_id: params[:subgenre_id], level: params[:level], id: params[:id])
+    @quiz = Quiz.find_by(genre_id: params[:genre_id], subgenre_id: params[:subgenre_id], thirdgenre_id: params[:thirdgenre_id], level: params[:level], id: params[:id])
     if @quiz.blank?
       next_id = params[:id].to_i+1
-      redirect_to "/quizes/#{params[:genre_id]}/#{params[:subgenre_id]}/#{params[:level]}/#{next_id}"
+      redirect_to "/quizes/#{params[:genre_id]}/#{params[:subgenre_id]}/#{params[:thirdgenre_id]}/#{params[:level]}/#{next_id}"
     end
-    @quizes = Quiz.where(genre_id: params[:genre_id]).where(subgenre_id: params[:subgenre_id]).where(level: params[:level])
+    @quizes = Quiz.where(genre_id: params[:genre_id]).where(subgenre_id: params[:subgenre_id]).where(thirdgenre_id: params[:thirdgenre_id]).where(level: params[:level])
     @quizes_array = @quizes.ids
     @quiz_number = @quizes_array.index{|num| num == params[:id].to_i}.to_i+1
     @last_quiz = @quizes.last

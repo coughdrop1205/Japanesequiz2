@@ -23,6 +23,9 @@
                 <% if !@quiz.image_name.blank? %>
                     <img src="<%= "/quizes_image/#{@quiz.image_name}" %>", class="quizes-show-image">
                 <% end %>
+                <!-- 正解不正解表示 -->
+                <div class="quizes-show-correct-message">
+                </div>
                 <!-- 各回答の表示 -->
                 <div class="quizes-show-list">
                     <% @quiz_list = [@quiz.a, @quiz.b, @quiz.c] %>
@@ -38,12 +41,6 @@
                 <%= link_to "https://twitter.com/share?url=#{request.url}/&text=#{@quiz.content}%0A%0ATo know the answer, please check below%0A%0A@ModernJapanesee" do %>
                     <button class="fa fa-twitter"> Share</button>
                 <% end %>
-            </div>
-            <!-- 正解不正解表示 -->
-            <div class="quizes-show-correct-message">
-            </div>
-            <div class="quizes-show-correct">
-                <%= @quiz.correct_answer %>
             </div>
             <!-- 解説表示 -->
             <div class="quizes-show-explanation">

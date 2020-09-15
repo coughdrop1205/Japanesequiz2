@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'quizes/:id/edit' => "quizes#edit"
   get 'quizes/:id/answer' => "quizes#answer"
   get 'quizes/:level/:theme/:road' => "quizes#road"
-  get 'quizes/:genre_id/:subgenre_id/:level/:id' => "quizes#show"
+  get 'quizes/:genre_id/:subgenre_id/:thirdgenre_id/:level/:id' => "quizes#show"
 
   post 'pages/:id/answer' => "pages#answer"
   post 'quizes/:id/answer' => "quizes#answer"
