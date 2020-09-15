@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_11_153126) do
+ActiveRecord::Schema.define(version: 2020_09_15_054940) do
 
   create_table "quizzes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "genre_id"
-    t.text "subgenre_id"
-    t.text "thirdgenre_id"
-    t.text "level"
-    t.text "theme"
-    t.text "road"
+    t.integer "subgenre_id", null: false
+    t.integer "thirdgenre_id", null: false
+    t.integer "level", null: false
+    t.integer "theme", null: false
+    t.integer "road", null: false
     t.text "content", null: false
     t.text "correct_answer"
     t.text "a", null: false
@@ -42,9 +42,9 @@ ActiveRecord::Schema.define(version: 2020_09_11_153126) do
     t.text "subgenre"
     t.integer "third_id", null: false
     t.text "thirdgenre"
+    t.integer "level", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "level", null: false
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
