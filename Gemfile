@@ -69,4 +69,9 @@ gem 'omniauth-facebook'
 #環境変数
 gem 'dotenv-rails'
 
+#Unicorn
+group :production, :staging do
+    gem 'unicorn'
+end
+
 gem 'seed_dump'
