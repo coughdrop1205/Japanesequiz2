@@ -12,42 +12,42 @@
 
 ActiveRecord::Schema.define(version: 2020_09_15_054940) do
 
-  create_table "quizzes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.text "genre_id"
-    t.integer "subgenre_id", null: false
-    t.integer "thirdgenre_id", null: false
-    t.integer "level", null: false
-    t.integer "theme", null: false
-    t.integer "road", null: false
+  create_table "quizzes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.text "content", null: false
-    t.text "correct_answer"
     t.text "a", null: false
     t.text "b", null: false
     t.text "c", null: false
+    t.text "correct_answer", null: false
     t.text "explanation", null: false
+    t.text "genre_id", null: false
     t.text "image_name"
-    t.text "created_at"
-    t.text "updated_at"
+    t.integer "level", null: false
+    t.integer "subgenre_id", null: false
+    t.integer "road", null: false
+    t.integer "theme", null: false
+    t.integer "thirdgenre_id", null: false
   end
 
-  create_table "stocks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "stocks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "quiz_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "subgenres", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "subgenres", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "sub_id", null: false
     t.text "subgenre"
     t.integer "third_id", null: false
     t.text "thirdgenre"
-    t.integer "level", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "level", null: false
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"

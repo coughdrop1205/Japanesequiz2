@@ -1,7 +1,3 @@
-User.create!([
-  {email: "rqis.ti1205@gmail.com", encrypted_password: "$2a$12$0OQbmo9B0i2UVmy5MWwOiegypjI4WKCcnXfOJxHtyx8mG14A2SFTy", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil, confirmation_token: "B9ehs9L7czVzXQqDPawM", confirmed_at: nil, confirmation_sent_at: "2020-09-05 11:00:06", unconfirmed_email: nil, failed_attempts: 0, unlock_token: nil, locked_at: nil, provider: "facebook", uid: "3049713258491276", username: nil},
-  {email: "earlobe888@gmail.com", encrypted_password: "$2a$12$HBPVP87Ied71O.b9iHJH4uE80hHoHT5lRWt4AQGPWPBGKgT3jKyuW", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil, confirmation_token: "2zMJ-dsKhQFBY6L1s3Bx", confirmed_at: "2020-09-05 13:17:05", confirmation_sent_at: "2020-09-05 13:16:27", unconfirmed_email: nil, failed_attempts: 0, unlock_token: nil, locked_at: nil, provider: nil, uid: nil, username: "ooo"}
-])
 Subgenre.create!([
   {sub_id: 0, subgenre: "None", third_id: 0, thirdgenre: "", level: 1},
   {sub_id: 1, subgenre: "Nature", third_id: 0, thirdgenre: "", level: 1},
@@ -18,9 +14,6 @@ Subgenre.create!([
   {sub_id: 7, subgenre: "Counting", third_id: 2, thirdgenre: "General", level: 1},
   {sub_id: 8, subgenre: "Verb", third_id: 1, thirdgenre: "５段活用", level: 1},
   {sub_id: 9, subgenre: "Short word", third_id: 0, thirdgenre: "", level: 1}
-])
-Stock.create!([
-  {user_id: 2, quiz_id: 21}
 ])
 Quiz.create!([
   {genre_id: "a", subgenre_id: 1, thirdgenre_id: 0, level: 1, theme: 0, road: 0, content: "What is \"Water\" in Japanese?", correct_answer: "水 (みず)", a: "山 (やま)", b: "水 (みず)", c: "土 (つち)", explanation: "水 is pronounced as みず meaning Water", image_name: ""},
