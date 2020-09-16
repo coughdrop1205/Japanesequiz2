@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  
+  root to: 'pages#index'
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
-  root to: 'pages#index'
   get 'pages/show'
   get 'pages/grammar' => "pages#grammar"
   get 'pages/modern' => "pages#modern"

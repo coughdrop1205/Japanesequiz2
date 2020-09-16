@@ -3,7 +3,7 @@
 
     /* タイトルページのボタン表示 */
     .pages-index-btn {
-        font-size: 10px;
+        font-size: 15px;
         font-weight: bolder;
     }
 
@@ -13,6 +13,26 @@
     }
 
     .pages-index-top h3 {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 10px;
+    }
+
+    .pages-grammar-top {
+        margin-top: 30px;
+    }
+
+    .pages-grammar-top h3 {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 10px;
+    }
+
+    .pages-modern-top {
+        margin-top: 30px;
+    }
+
+    .pages-modern-top h3 {
         font-size: 20px;
         line-height: 30px;
         margin-bottom: 10px;

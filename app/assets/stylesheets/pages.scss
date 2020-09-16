@@ -26,45 +26,173 @@
     opacity: 0.95;
 }
 
-.pages-index-level p {
-    text-align: center;
-    margin-right: 320px;
-}
-
 .pages-index-genre ul li {
     display: block;
     text-align: center;
     text-decoration: none;
 }
 
-.pages-index-title {
+.pages-index-btn {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    padding: 15px 20px;
+    width: 300px;
+    color: white;
+    opacity: 0.7;
+    background-color: rgb(55, 196, 102);
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.pages-index-btn:hover {
+    opacity: 1;
+}
+
+//Grammarページ
+
+.pages-grammar {
+    margin-top: 0px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    height: 800px;
+    padding: 20px;
+    background-image: url("/forest.png");
+}
+
+.pages-grammar-top {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.pages-grammar-top h3 {
+    margin-bottom: 50px;
+    font-size: 35px;
+    text-shadow: 2px 2px 4px #363636; 
+    line-height: 40px;
+    color: white;
+    opacity: 0.95;
+}
+
+.pages-grammar-wrapper {
+    width: 300px;
+    margin: 0px auto 0px auto;
+}
+
+.pages-grammar-level {
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #ffffff; 
+    line-height: 40px;
+    color: rgb(55, 196, 102);
+    opacity: 0.95;
+}
+
+.pages-grammar-genre ul li {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.pages-grammar-btn {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    padding: 15px 20px;
+    width: 300px;
+    color: white;
+    opacity: 0.7;
+    background-color: rgb(55, 196, 102);
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.pages-grammar-btn:hover {
+    opacity: 1;
+}
+
+//Modernページ
+
+.pages-modern {
+    margin-top: 0px;
+    background-color: white;
+    height: 800px;
+    padding: 20px;
+    background-image: url("/forest.png");
+}
+
+.pages-modern-top {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.pages-modern-top h3 {
+    margin-bottom: 50px;
+    font-size: 35px;
+    text-shadow: 2px 2px 4px #363636; 
+    line-height: 40px;
+    color: white;
+    opacity: 0.95;
+}
+
+.pages-modern-wrapper {
+    width: 400px;
+    margin: 0px auto 0px auto;
+}
+
+.pages-modern-level p {
+    text-align: center;
+    margin-right: 320px;
+}
+
+.pages-modern-genre ul li {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.pages-modern-title {
     display: block;
     text-align: left;
     color: rgb(2, 138, 58);
-    text-shadow: 3px 3px 2px rgb(175, 252, 131);
+    text-shadow: 3px 3px rgba(255, 255, 255, 0.938);
     font-weight: bold;
     padding: 10px 0px 10px 10px;
     font-size: 30px;
     clear: both;
 }
 
-.pages-index-subtitle {
+.pages-modern-subwrapper {
+    width: 380px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.pages-modern-subtitle {
     display: block;
     margin-left: 10px;
     text-align: left;
     color: rgb(0, 121, 94);
+    text-shadow: 3px 3px rgba(255, 255, 255, 0.938);
     font-weight: bold;
     font-size: 20px;
     clear: both;
 }
 
-.pages-index-btn {
+.pages-modern-btn {
     display: inline-block;
     float: left;
+    text-align: center;
     margin-bottom: 10px;
-    margin-left: 5px;
-    padding: 15px 20px;
-    width: 60px;
+    margin-left: 10px;
+    padding: 15px 7px;
+    width: 50px;
+    font-size: 15px;
     color: white;
     opacity: 0.7;
     background-color: rgb(55, 196, 102);
@@ -84,9 +212,11 @@
     background-color: rgb(196, 160, 1);
 }
 
-.pages-index-btn:hover {
+.pages-modern-btn:hover {
     opacity: 1;
 }
+
+
 
 // Mypage
 

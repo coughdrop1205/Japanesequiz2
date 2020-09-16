@@ -10,17 +10,17 @@ class StocksController < ApplicationController
       if @stocks.length < 30
         @stock.save
         if @quiz.road = 0
-          redirect_to("/quizes/#{@quiz.genre_id}/#{@quiz.subgenre_id}/#{@quiz.level}/#{@quiz.id}")
+          redirect_to("/quizes/#{@quiz.genre_id}/#{@quiz.subgenre_id}/#{@quiz.thirdgenre_id}/#{@quiz.level}/#{@quiz.id}")
         else
-          redirect_to("/quizes/#{@quiz.level}/#{@quiz.road}")
+          redirect_to("/quizes/#{@quiz.level}/#{@quiz.theme}/#{@quiz.road}")
         end
       else
         if @quiz.road = 0
           flash[:notice] = "Sorry, you cannot have more than 30 favorites!"
-          redirect_to("/quizes/#{@quiz.genre_id}/#{@quiz.subgenre_id}/#{@quiz.level}/#{@quiz.id}")
+          redirect_to("/quizes/#{@quiz.genre_id}/#{@quiz.subgenre_id}/#{@quiz.thirdgenre_id}/#{@quiz.level}/#{@quiz.id}")
         else
           flash[:notice] = "Sorry, you cannot have more than 30 favorites!"
-          redirect_to("/quizes/#{@quiz.level}/#{@quiz.road}")
+          redirect_to("/quizes/#{@quiz.level}/#{@quiz.theme}/#{@quiz.road}")
         end
       end
     else
@@ -37,9 +37,9 @@ class StocksController < ApplicationController
     )
     @stock.destroy
     if @quiz.road = 0
-      redirect_to("/quizes/#{@quiz.genre_id}/#{@quiz.subgenre_id}/#{@quiz.level}/#{@quiz.id}")
+      redirect_to("/quizes/#{@quiz.genre_id}/#{@quiz.subgenre_id}/#{@quiz.thirdgenre_id}/#{@quiz.level}/#{@quiz.id}")
     else
-      redirect_to("/quizes/#{@quiz.level}/#{@quiz.road}")
+      redirect_to("/quizes/#{@quiz.level}/#{@quiz.theme}/#{@quiz.road}")
     end
   end
 
