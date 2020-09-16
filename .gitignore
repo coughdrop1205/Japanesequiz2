@@ -71,9 +71,6 @@ yarn-debug.log*
 /storage/*
 !/storage/.keep
 
-# Ignore devise for Facebook
-config/initializers/devise.rb
-
 # End of https://www.toptal.com/developers/gitignore/api/rails
 
 /public/packs
