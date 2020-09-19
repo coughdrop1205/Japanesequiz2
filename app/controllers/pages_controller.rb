@@ -23,18 +23,22 @@ class PagesController < ApplicationController
   end
 
   def grammar
-    @quiz_1 = Quiz.find_by(level:1, theme: 1, road:1)
-    @quiz_2 = Quiz.find_by(level:1, theme: 2, road:1)
-    @quiz_3 = Quiz.find_by(level:1, theme: 3)
+    @quiz1_1 = Quiz.find_by(level:1, theme: 1, road:1)
+    @quiz1_2 = Quiz.find_by(level:1, theme: 2, road:1)
+    @quiz1_3 = Quiz.find_by(level:1, theme: 3)
+    @quiz2_1 = Quiz.find_by(level:2, theme: 1, road:1)
   end
 
   def modern
     @genre1 = Subgenre.where(sub_id: 1)
-    @genre２ = Subgenre.where(sub_id: 2)
+    @genre2 = Subgenre.where(sub_id: 2)
     @genre4 = Subgenre.where(sub_id: 4)
+    @genre5 = Subgenre.where(sub_id: 5)
     @genre6 = Subgenre.where(sub_id: 6)
     @genre7_1 = Subgenre.where(sub_id: 7, third_id: 1)
     @genre7_2 = Subgenre.where(sub_id: 7, third_id: 2)
     @genre8 = Subgenre.where(sub_id: 8)
+    @genre9 = Subgenre.where(sub_id: 9)
+    @genre13 = Subgenre.where(sub_id: 13)
   end
 end

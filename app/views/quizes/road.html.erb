@@ -1,7 +1,7 @@
 <div class="main quizes-show">
     <div class="quizes-show-top">
-        <!-- タイトルの表示 -->
-        <h2><%= "Quiz #{@quiz.road}" %></h2>
+        <!-- クイズ番号の表示 -->
+        <h2><%= "Quiz #{@quizes.index(@quiz).to_i+1} / #{@quizes.length}" %></h2>
         <!-- Stockの表示 -->
         <div class="quizes-show-stock">
         <% if current_user && Stock.find_by(user_id: current_user.id, quiz_id: @quiz.id) %>
@@ -44,15 +44,17 @@
             </div>
             <!-- 解説表示 -->
             <div class="quizes-show-explanation">
-                <p>Explanation</p>
+                <% if @quiz.explanation.blank? == false %>
+                    <%= "Explanation" %>
+                <% end %>
             </div>
             <div class="quizes-show-explanation-content">
                 <%= simple_format(@quiz.explanation, class: 'quizes-show-explanation-content2') %>
             </div>
             <!-- 次ボタン表示 -->
             <div class="quizes-show-next">
-                <% if (@quiz.road.to_i < @quizes_array.max.to_i) %>
-                    <%= link_to("Next >>", "/quizes/#{@quiz.level}/#{@quiz.theme}/#{@quiz.road.to_i+1}", {class: "quizes-show-btn"}) %>
+                <% if (@quizes.index(@quiz)+1 < @quizes.length) %>
+                    <%= link_to("Next >>", "/quizes/#{@quizes[@quizes.index(@quiz).to_i+1].level}/#{@quizes[@quizes.index(@quiz).to_i+1].theme}/#{@quizes[@quizes.index(@quiz).to_i+1].road}", {class: "quizes-show-btn"}) %>
                 <% else %>
                     <%= link_to("Back", "/pages/grammar", {class: "quizes-show-btn"}) %>
                 <% end %>

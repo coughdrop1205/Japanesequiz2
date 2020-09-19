@@ -1,7 +1,7 @@
 <div class="main quizes-show">
     <div class="quizes-show-top">
         <!-- タイトルの表示 -->
-        <h2><%= "Quiz #{@quiz_number}" %></h2>
+        <h2><%= "Quiz #{@quizes.index(@quiz)+1} / #{@quizes.length}" %></h2>
         <!-- Stockの表示 -->
         <div class="quizes-show-stock">
             <% if current_user && Stock.find_by(user_id: current_user.id, quiz_id: @quiz.id) %>
@@ -44,15 +44,17 @@
             </div>
             <!-- 解説表示 -->
             <div class="quizes-show-explanation">
-                <p>Explanation</p>
+                <% if @quiz.explanation.blank? == false %>
+                    <%= "Explanation" %>
+                <% end %>
             </div>
             <div class="quizes-show-explanation-content">
                 <%= simple_format(@quiz.explanation, class: 'quizes-show-explanation-content2') %>
             </div>
             <!-- 次ボタン表示 -->
             <div class="quizes-show-next">
-                <% if (@quiz.id < @last_quiz.id) %>
-                    <%= link_to("Next >>", "/quizes/#{@quiz.genre_id}/#{@quiz.subgenre_id}/#{@quiz.thirdgenre_id}/#{@quiz.level}/#{@quiz.id+1}", {class: "quizes-show-btn"}) %>
+                <% if (@quizes.index(@quiz)+1 < @quizes.length) %>
+                    <%= link_to("Next >>", "/quizes/#{@quizes[@quizes.index(@quiz).to_i+1].genre_id}/#{@quizes[@quizes.index(@quiz).to_i+1].subgenre_id}/#{@quizes[@quizes.index(@quiz).to_i+1].thirdgenre_id}/#{@quizes[@quizes.index(@quiz).to_i+1].level}/#{@quizes[@quizes.index(@quiz).to_i+1].id}", {class: "quizes-show-btn"}) %>
                 <% else %>
                     <%= link_to("Back", "/pages/modern", {class: "quizes-show-btn"}) %>
                 <% end %>

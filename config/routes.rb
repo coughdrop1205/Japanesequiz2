@@ -21,10 +21,6 @@ Rails.application.routes.draw do
   post 'stocks/:quiz_id/create' => "stocks#create"
   post 'stocks/:quiz_id/destroy' => "stocks#destroy"
   post 'stocks/:quiz_id/destroy2' => "stocks#destroy2"
-  
-  # root to: "home#index"
-  
-
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
