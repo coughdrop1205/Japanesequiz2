@@ -85,3 +85,12 @@ yarn-debug.log*
 =======
 
 >>>>>>> b22842b18f3415d4077e2294906ae843fa922f16
+
+/config/master.key
+
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity

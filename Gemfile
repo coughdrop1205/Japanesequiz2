@@ -75,3 +75,12 @@ group :production, :staging do
 end
 
 gem 'seed_dump'
+
+#Stripe
+gem 'stripe'
+
+#bootstrap
+gem 'bootstrap','~> 4.1.3'
+
+#jquery
+gem 'jquery-rails'

@@ -1,49 +1,10 @@
-class PagesController < ApplicationController
-  before_action :sign_in_required, only: [:show]
-  # クレジットカード情報を送ってストライプトークンがcreateアクションに送られてくるのだが
+class CardController < ApplicationController
+  
+    # クレジットカード情報を送ってストライプトークンがcreateアクションに送られてくるのだが
   # https通信ではないやり取りで安全性が確認できないためプロテクトから除外させる
   protect_from_forgery except: :create
 
   def index
-    @genre_a = Quiz.find_by(genre_id: "a")
-    @genre_b = Quiz.find_by(genre_id: "b")
-    @genre_c = Quiz.find_by(genre_id: "c")
-    @genre_d = Quiz.find_by(genre_id: "d")
-    @genre_e = Quiz.find_by(genre_id: "e")
-    @genre_f = Quiz.find_by(genre_id: "f")
-  end
-
-  def show
-    @stocks = Stock.where(user_id: current_user.id)
-  end
-
-  def answer
-    @explanation = params[:explanation]
-    @number = params[:id]
-    respond_to do |format|
-      format.html
-      format.js
-    end
-  end
-
-  def grammar
-    @quiz1_1 = Quiz.find_by(level:1, theme: 1, road:1)
-    @quiz1_2 = Quiz.find_by(level:1, theme: 2, road:1)
-    @quiz1_3 = Quiz.find_by(level:1, theme: 3)
-    @quiz2_1 = Quiz.find_by(level:2, theme: 1, road:1)
-  end
-
-  def modern
-    @genre1 = Subgenre.where(sub_id: 1)
-    @genre2 = Subgenre.where(sub_id: 2)
-    @genre4 = Subgenre.where(sub_id: 4)
-    @genre5 = Subgenre.where(sub_id: 5)
-    @genre6 = Subgenre.where(sub_id: 6)
-    @genre7_1 = Subgenre.where(sub_id: 7, third_id: 1)
-    @genre7_2 = Subgenre.where(sub_id: 7, third_id: 2)
-    @genre8 = Subgenre.where(sub_id: 8)
-    @genre9 = Subgenre.where(sub_id: 9)
-    @genre13 = Subgenre.where(sub_id: 13)
   end
 
   # httpメソッドはpost
@@ -114,15 +75,15 @@ class PagesController < ApplicationController
             subscription = Stripe::Subscription.create({
               customer: customer.id,
               items: [{plan: plan.stripe_plan_id}],
-              tax_percent: 8.00,# 税金(サービスの税金なので税理士に相談して税率を決定)(消費税率にしてるだけ)
-              trial_end: trial_end_time.to_i,# 無料の試用期間
+              #tax_percent: 8.00,# 税金(サービスの税金なので税理士に相談して税率を決定)(消費税率にしてるだけ)
+              #trial_end: trial_end_time.to_i,# 無料の試用期間
               # (試用期間が終わるまでを表したUNIXのタイムスタンプ整数)
               # (早期に終了したい場合はtrial_end: 'now’にする)
               # (trial_period_daysで日数での指定もできるがtrial_endの方が使いやすい)
               # (試用期間終了3日前にWebhookからcustomer.subscription.trial_will_endイベントが送信される)
               # (試用期間終了後invoice.createdイベントが送信される)
 
-              billing_cycle_anchor: billing_cycle_anchor_time.to_i,# 試用期間が終わった初めての請求日の設定
+              #billing_cycle_anchor: billing_cycle_anchor_time.to_i,# 試用期間が終わった初めての請求日の設定
               # (請求日までの時間をUNIXのタイムスタンプ整数にしたもの)
               # (サブスクリプションの通常の定期更新の時の請求日は即時になるが、これがあると請求日サイクル日を設定できる)
               # (この設定がなければ月の最終日に請求がある？)
@@ -176,6 +137,8 @@ class PagesController < ApplicationController
 
   end
 
+
+
   # httpメソッドはdelete
   # destroy.html.erbのキャンセルボタンで発動
   def cancel_subscription
@@ -188,7 +151,8 @@ class PagesController < ApplicationController
     if team.stripe_subscription_id != nil
       # サブスクリプションの停止(キャンセル)
       subscription = Stripe::Subscription.retrieve(team.stripe_subscription_id)
-      subscription.delete(at_period_end: true)# 期間終了時にキャンセルのオプション付き
+      subscription.delete
+      #subscription.delete(at_period_end: true)# 期間終了時にキャンセルのオプション付き
 
       # 月額課金がキャンセルされたのでレコードから:plan_idと:active_untilとstripe_subscription_idを削除
       # カードトークンとカスタマーIDは残す
@@ -216,6 +180,8 @@ class PagesController < ApplicationController
     end
 
   end
+
+
 
   # httpメソッドはput
   # restart.html.erbの再開ボタンで発動
@@ -246,14 +212,14 @@ class PagesController < ApplicationController
     subscription = Stripe::Subscription.create({
       customer: team.stripe_customer_id,
       items: [{plan: plan.stripe_plan_id}],
-      tax_percent: 8.00,# 税金(サービスの税金なので税理士に相談して税率を決定)(消費税率にしてるだけ)
-      trial_end: trial_end_time.to_i,# 無料の試用期間
+      #tax_percent: 8.00,# 税金(サービスの税金なので税理士に相談して税率を決定)(消費税率にしてるだけ)
+      #trial_end: trial_end_time.to_i,# 無料の試用期間
       # (試用期間が終わるまでを表したUNIXのタイムスタンプ整数)
       # (早期に終了したい場合はtrial_end: 'now'にする)
       # (trial_period_daysで日数での指定もできるがtrial_endの方が使いやすい)
       # (試用期間終了3日前にWebhookからcustomer.subscription.trial_will_endイベントが送信される)
       # (試用期間終了後invoice.createdイベントが送信される)
-      billing_cycle_anchor: billing_cycle_anchor_time.to_i,# 試用期間が終わった初めての請求日の設定
+      #billing_cycle_anchor: billing_cycle_anchor_time.to_i,# 試用期間が終わった初めての請求日の設定
       # (請求日までの時間をUNIXのタイムスタンプ整数にしたもの)
       # (サブスクリプションの通常の定期更新の時の請求日とは違う。だから定期更新の時の請求日と合わせるとやりやすい)
       # (この設定がなければ月の最終日に請求がある)
@@ -293,5 +259,9 @@ class PagesController < ApplicationController
     end
 
   end
+
+  #def fin_subscription
+  #end
+
 
 end

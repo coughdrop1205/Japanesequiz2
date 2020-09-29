@@ -16,6 +16,18 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 //= require audiojs
 
+// アセットパイプライン
+//= require rails-ujs
+//= require activestorage
+//= require turbolinks
+//= require_tree .
+
+// bootstrap
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
+
+
 
 $(function() {
     //ヘッダーの高さ分だけコンテンツを下げる
