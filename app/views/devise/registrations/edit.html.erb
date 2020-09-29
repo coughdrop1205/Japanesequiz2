@@ -49,7 +49,13 @@
       <h3>Cancel my account</h3>
     </div>
     <div class="regis-edit-field">
-      <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+      <p>Unhappy? 
+        <% if Team.find_by(user_id: current_user.id).stripe_subscription_id %>
+          <%= button_to '月額課金キャンセル', card_cancel_subscription_path, method: :put %>
+        <% else %>
+          <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+        <% end %>
+      </p>
     </div>
     <%= link_to "Back", :back %>
   </div>
