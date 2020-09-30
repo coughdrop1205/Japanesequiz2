@@ -51,6 +51,10 @@
             <div class="quizes-show-explanation-content">
                 <%= simple_format(@quiz.explanation, class: 'quizes-show-explanation-content2') %>
             </div>
+            <!-- 音声 -->
+            <div class="quizes-show-sound">
+                <audio src="/assets/sample.mp3" controlslist="nodownload" controls></audio>
+            </div>
             <!-- 次ボタン表示 -->
             <div class="quizes-show-next">
                 <% if (@quizes.index(@quiz)+1 < @quizes.length) %>
