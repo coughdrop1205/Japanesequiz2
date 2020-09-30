@@ -27,7 +27,18 @@ class QuizesController < ApplicationController
   end
 
   def create
-    @quiz = Quiz.new(content: params[:content], a: params[:answer_a], b: params[:answer_b], c: params[:answer_c], correct_answer: params[:correct_answer], explanation: params[:explanation], genre_id: params[:genre_id], subgenre_id: params[:subgenre_id], road: params[:road], level: params[:level])
+    @quiz = Quiz.new(content: params[:content],
+     a: params[:answer_a],
+     b: params[:answer_b],
+     c: params[:answer_c],
+     correct_answer: params[:correct_answer],
+     explanation: params[:explanation],
+     genre_id: params[:genre_id],
+     subgenre_id: params[:subgenre_id],
+     thirdgenre_id: params[:thirdgenre_id],
+     theme: params[:theme],
+     road: params[:road],
+     level: params[:level])
     if params[:image_name]
       @quiz.image_name = "#{@quiz.id}.png"
       image = params[:image_name]
@@ -60,6 +71,8 @@ class QuizesController < ApplicationController
     @quiz.explanation = params[:explanation]
     @quiz.genre_id = params[:genre_id]
     @quiz.subgenre_id = params[:subgenre_id]
+    @quiz.thirdgenre_id = params[:thirdgenre_id]
+    @quiz.theme = params[:theme]
     @quiz.road = params[:road]
     @quiz.level = params[:level]
     if @quiz.save

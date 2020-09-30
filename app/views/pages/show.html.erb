@@ -1,5 +1,5 @@
-<div class="main pages-show">
-    <div class="pages-show-top">
+<div class="main">
+    <div class="main-top">
         <div class="pages-show-title">
             <p>Hello, <%= current_user.username %> さん</p>
         </div>
@@ -35,7 +35,9 @@
                                 <p><%= quiz.explanation %></p>
                             </div>
                             <!-- 解説表示のボタン -->
-                            <input class="pages-explanation-btn d<%= i %>" type="submit" name="explanation" value="E">
+                            <% if !quiz.explanation.blank? %>
+                                <input class="pages-explanation-btn d<%= i %>" type="submit" name="explanation" value="E">
+                            <% end %>
                         </div>
                     <% end %>
                 <% end %>

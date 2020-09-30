@@ -70,3 +70,23 @@ footer {
     border-radius: 0 0 2px 2px;
     font-size: 14px;
   }
+
+.main {
+    margin-top: 0px;
+    min-height: 800px;
+    max-height: 4000px;
+    padding: 20px;
+    background-image: url("/forest.png");
+    background-color: rgba(255, 255, 255, 0.4);
+    background-blend-mode: lighten;
+    font-family: 'Comic Sans MS', 'YuGothic', sans-serif;
+}
+
+.main-top {
+    margin: 10px auto;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+}

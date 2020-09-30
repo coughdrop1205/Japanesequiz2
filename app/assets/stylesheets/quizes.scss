@@ -3,26 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 
-//quiz/showpage
-
-.quizes-show {
-    background-image: url("/forest.png");
-    background-color: rgba(255, 255, 255, 0.4);
-    background-blend-mode: lighten;
-    height: 800px;
-    padding-top: 15px;
-    width: 100%;
-    font-family: 'Comic Sans MS', 'YuGothic', sans-serif;
-}
-
-.quizes-show-top {
-    margin: 10px auto;
-    width: 300px;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    text-align: center;
-    border-radius: 4px;
-}
+//クイズ表示
 
 .quizes-show-stock {
     text-align: right;
@@ -38,8 +19,7 @@
     color: #fac002;
 }
 
-
-.quizes-show-top h2 {
+.main-top h2 {
     font-size: 20px;
     color: rgb(34, 129, 129);
     text-align: left;
@@ -150,13 +130,6 @@
 
 //クイズ新規投稿
 
-.quizes-new {
-    background-color: white;
-    height: 800px;
-    padding-top: 100px;
-    text-align: center;
-}
-
 .quizes-new-error {
     color: red;
 }
@@ -167,13 +140,6 @@
 
 //クイズ編集
 
-.quizes-edit {
-    background-color: white;
-    height: 800px;
-    padding-top: 100px;
-    text-align: center;
-}
-
 .quizes-edit-error {
     color: red;
 }
@@ -181,48 +147,3 @@
 .quizes-edit-textform {
     margin: 10px 0px;
 }
-
-
-.quizes-destroy {
-    background-color: white;
-    height: 800px;
-    padding-top: 100px;
-    text-align: center;
-}
-
-
-// .pages-index {
-//     margin-top: 90px;
-//     background-color: white;
-//     height: 800px;
-//     padding: 20px;
-//     background-image: url("/fujisan.png");
-// }
-
-// .pages-index-top {
-//     margin-top: 250px;
-//     text-align: center;
-// }
-
-// .pages-index-top h3 {
-//     font-size: 35px;
-//     color: white;
-//     opacity: 0.7;
-// }
-
-// .pages-index-btn {
-//     font-size: 30px;
-//     margin-top: 50px;
-//     padding: 15px 20px;
-//     display: inline-block;
-//     color: white;
-//     opacity: 0.4;
-//     background-color: rgb(196, 100, 55);
-//     border-radius: 8px;
-//     text-decoration: none;
-// }
-
-// .pages-index-btn:hover {
-//     opacity: 1;
-// }
-

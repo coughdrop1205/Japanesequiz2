@@ -1,80 +1,94 @@
-<div class="main quizes-new">
-    <%= form_tag("/quizes/create", {multipart: true})do %>
-        <div class="quizes-new-top">
-            <div class="quizes-new-error">
-                <% @quiz.errors.full_messages.each do |message| %>
-                <p><%= message %></p>
-                <% end %>
+<div class="main">
+    <div class="main-top">
+        <%= form_tag("/quizes/create", {multipart: true})do %>
+            <div class="quizes-new-top">
+                <div class="quizes-new-error">
+                    <% @quiz.errors.full_messages.each do |message| %>
+                    <p><%= message %></p>
+                    <% end %>
+                </div>
+                <div class="quizes-new-title">
+                    <p>New Quiz</p>
+                </div>
+                <div class="quizes-new-textform">
+                    <textarea name="content"><%= @quiz.content %></textarea>
+                </div>
+                <div class="quizes-new-image">
+                    <p>Image</p>
+                </div>
+                <div class="quizes-new-textform">
+                    <input type="file" name="image_name">
+                </div>
+                <div class="quizes-new-answer a">
+                    <p>Answer_A</p>
+                </div>
+                <div class="quizes-new-textform">
+                    <input type="text" name="answer_a" value="<%= @quiz.a %>">
+                </div>
+                <div class="quizes-new-answer b">
+                    <p>Answer_B</p>
+                </div>
+                <div class="quizes-new-textform">
+                    <input type="text" name="answer_b" value="<%= @quiz.b %>">
+                </div>
+                <div class="quizes-new-answer c">
+                    <p>Answer_C</p>
+                </div>
+                <div class="quizes-new-textform">
+                    <input type="text" name="answer_c" value="<%= @quiz.c %>">
+                </div>
+                <div class="quizes-new-correct">
+                    <p>Correct Answer</p>
+                </div>
+                <div class="quizes-new-textform">
+                    <input type="text" name="correct_answer" value="<%= @quiz.correct_answer %>">
+                </div>
+                <div class="quizes-new-explanation">
+                    <p>Explanation</p>
+                </div>
+                <div class="quizes-new-textform">
+                    <textarea type="text" name="explanation"></textarea>
+                </div>
+                <div class="quizes-new-genre">
+                    <p>Genre</p>
+                </div>
+                <div class="quizes-new-textform">
+                    <input type="text" name="genre_id" value="<%= @quiz.genre_id %>">
+                </div>
+                <div class="quizes-new-subgenre">
+                    <p>Subgenre</p>
+                </div>
+                <div class="quizes-new-textform">
+                    <input type="text" name="subgenre_id" value="<%= @quiz.subgenre_id %>">
+                </div>
+                <div class="quizes-new-thirdgenre">
+                    <p>Thirdgenre</p>
+                </div>
+                <div class="quizes-new-textform">
+                    <input type="text" name="thirdgenre_id" value="<%= @quiz.thirdgenre_id %>">
+                </div>
+                <div class="quizes-new-theme">
+                    <p>Theme</p>
+                </div>
+                <div class="quizes-new-textform">
+                    <input type="text" name="theme" value="<%= @quiz.theme %>">
+                </div>
+                <div class="quizes-new-road">
+                    <p>Road</p>
+                </div>
+                <div class="quizes-new-textform">
+                    <input type="text" name="road" value="<%= @quiz.road %>">
+                </div>
+                <div class="quizes-edit-level">
+                    <p>Level</p>
+                </div>
+                <div class="quizes-new-textform">
+                    <input type="text" name="level" value="<%= @quiz.level %>">
+                </div>
+                <div class="quizes-new-submit">
+                    <input type="submit" value="Post">
+                </div>
             </div>
-            <div class="quizes-new-title">
-                <p>New Quiz</p>
-            </div>
-            <div class="quizes-new-textform">
-                <textarea name="content"><%= @quiz.content %></textarea>
-            </div>
-            <div class="quizes-new-image">
-                <p>Image</p>
-            </div>
-            <div class="quizes-new-textform">
-                <input type="file" name="image_name">
-            </div>
-            <div class="quizes-new-answer a">
-                <p>Answer_A</p>
-            </div>
-            <div class="quizes-new-textform">
-                <input type="text" name="answer_a" value="<%= @quiz.a %>">
-            </div>
-            <div class="quizes-new-answer b">
-                <p>Answer_B</p>
-            </div>
-            <div class="quizes-new-textform">
-                <input type="text" name="answer_b" value="<%= @quiz.b %>">
-            </div>
-            <div class="quizes-new-answer c">
-                <p>Answer_C</p>
-            </div>
-            <div class="quizes-new-textform">
-                <input type="text" name="answer_c" value="<%= @quiz.c %>">
-            </div>
-            <div class="quizes-new-correct">
-                <p>Correct Answer</p>
-            </div>
-            <div class="quizes-new-textform">
-                <input type="text" name="correct_answer" value="<%= @quiz.correct_answer %>">
-            </div>
-            <div class="quizes-new-explanation">
-                <p>Explanation</p>
-            </div>
-            <div class="quizes-new-textform">
-                <textarea type="text" name="explanation"></textarea>
-            </div>
-            <div class="quizes-new-genre">
-                <p>Genre</p>
-            </div>
-            <div class="quizes-new-textform">
-                <input type="text" name="genre_id" value="<%= @quiz.genre_id %>">
-            </div>
-            <div class="quizes-new-subgenre">
-                <p>Subgenre</p>
-            </div>
-            <div class="quizes-new-textform">
-                <input type="text" name="subgenre_id" value="<%= @quiz.subgenre_id %>">
-            </div>
-            <div class="quizes-new-road">
-                <p>Road</p>
-            </div>
-            <div class="quizes-new-textform">
-                <input type="text" name="road" value="<%= @quiz.road %>">
-            </div>
-            <div class="quizes-edit-level">
-                <p>Level</p>
-            </div>
-            <div class="quizes-new-textform">
-                <input type="text" name="level" value="<%= @quiz.level %>">
-            </div>
-            <div class="quizes-new-submit">
-                <input type="submit" value="Post">
-            </div>
-        </div>
-    <% end %>
+        <% end %>
+    </div>
 </div>
