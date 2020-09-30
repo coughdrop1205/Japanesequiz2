@@ -18,6 +18,7 @@
 
 * {
     box-sizing: border-box;
+    -webkit-appearance: none;
 }
 
 header {
@@ -79,7 +80,9 @@ footer {
     background-image: url("/forest.png");
     background-color: rgba(255, 255, 255, 0.4);
     background-blend-mode: lighten;
-    font-family: 'Comic Sans MS', 'YuGothic', sans-serif;
+    //font-family: 'Comic Sans MS', 'YuGothic', sans-serif;
+    //font: 13px Verdana, Helvetica, Arial, sans-serif;
+    font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic'
 }
 
 .main-top {
