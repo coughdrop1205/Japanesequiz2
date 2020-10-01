@@ -14,6 +14,6 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 
 
-Rails.application.config.assets.paths << Rails.root.join("app", "assets", "audios")
+#Rails.application.config.assets.paths << Rails.root.join("app", "assets", "audios")
 
-Rails.application.config.assets.precompile += %w( sample.mp3 )
+#Rails.application.config.assets.precompile += %w( *.m4a, sample.mp3, water.m4a )
