@@ -1,7 +1,7 @@
 <div class="main">
     <div class="main-top">
         <!-- タイトルの表示 -->
-        <h2><%= "Quiz #{@quizes.index(@quiz)+1} / #{@quizes.length}" %></h2>
+        <h2><%= "Quiz #{@quizes.index(@quiz).to_i+1} / #{@quizes.length}" %></h2>
         <!-- Stockの表示 -->
         <div class="quizes-show-stock">
             <% if current_user && Stock.find_by(user_id: current_user.id, quiz_id: @quiz.id) %>
@@ -70,7 +70,7 @@
             <% if current_user && current_user.id == 1 %>
                 <!-- 編集・削除表示 -->
                 <%= link_to("Edit", "/quizes/#{@quiz.id}/edit", {class: "quizes-edit-btn"}) %>
-                <%= link_to("Destroy", "/quizes/#{@quiz.id}/destroy", {method:"post", class: "quizes-destroy-btn"}) %>
+                <%= link_to("Destroy", "/quizes/#{@quiz.id}/destroy", data: {confirm: "Are you sure?", method:"post", class: "quizes-destroy-btn"}) %>
             <% end %>
         </div>
     </div>

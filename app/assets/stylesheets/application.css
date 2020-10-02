@@ -75,7 +75,7 @@ footer {
 .main {
     margin-top: 0px;
     min-height: 800px;
-    max-height: 4000px;
+    max-height: 100000px;
     padding: 20px;
     background-image: url("/forest.png");
     background-color: rgba(255, 255, 255, 0.4);

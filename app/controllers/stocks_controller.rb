@@ -7,7 +7,23 @@ class StocksController < ApplicationController
         quiz_id: params[:quiz_id]
       )
       @stocks = Stock.where(user_id: current_user.id)
-      if @stocks.length < 30
+
+      if Team.find_by(user_id: current_user.id).stripe_subscription_id && @stocks.length < 200
+        @stock.save
+        if @quiz.road = 0
+          redirect_to("/quizes/#{@quiz.genre_id}/#{@quiz.subgenre_id}/#{@quiz.thirdgenre_id}/#{@quiz.level}/#{@quiz.id}")
+        else
+          redirect_to("/quizes/#{@quiz.level}/#{@quiz.theme}/#{@quiz.road}")
+        end
+      elsif Team.find_by(user_id: current_user.id).stripe_subscription_id && @stocks.length >= 200
+        if @quiz.road = 0
+          flash[:notice] = "Sorry, you cannot have more than 200 stocks!"
+          redirect_to("/quizes/#{@quiz.genre_id}/#{@quiz.subgenre_id}/#{@quiz.thirdgenre_id}/#{@quiz.level}/#{@quiz.id}")
+        else
+          flash[:notice] = "Sorry, you cannot have more than 200 stocks!"
+          redirect_to("/quizes/#{@quiz.level}/#{@quiz.theme}/#{@quiz.road}")
+        end
+      elsif @stocks.length < 30
         @stock.save
         if @quiz.road = 0
           redirect_to("/quizes/#{@quiz.genre_id}/#{@quiz.subgenre_id}/#{@quiz.thirdgenre_id}/#{@quiz.level}/#{@quiz.id}")
@@ -16,10 +32,10 @@ class StocksController < ApplicationController
         end
       else
         if @quiz.road = 0
-          flash[:notice] = "Sorry, you cannot have more than 30 favorites!"
+          flash[:notice] = "Sorry, you cannot have more than 30 stocks! Please be a patron to stock more quizzes!!"
           redirect_to("/quizes/#{@quiz.genre_id}/#{@quiz.subgenre_id}/#{@quiz.thirdgenre_id}/#{@quiz.level}/#{@quiz.id}")
         else
-          flash[:notice] = "Sorry, you cannot have more than 30 favorites!"
+          flash[:notice] = "Sorry, you cannot have more than 30 stocks! Please be a patron to stock more quizzes!!"
           redirect_to("/quizes/#{@quiz.level}/#{@quiz.theme}/#{@quiz.road}")
         end
       end
