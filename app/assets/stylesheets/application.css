@@ -93,3 +93,9 @@ footer {
     text-align: center;
     border-radius: 4px;
 }
+
+.clearfix:after{
+	content: "";
+	clear: both;
+	display: block;
+}
