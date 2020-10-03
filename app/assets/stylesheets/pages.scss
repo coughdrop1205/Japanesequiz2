@@ -4,20 +4,12 @@
 
 //タイトルページ
 
-.pages-index {
-    margin-top: 0px;
-    background-color: white;
-    height: 800px;
-    padding: 20px;
-    background-image: url("/forest.png");
-}
-
-.pages-index-top {
+.pages-top-message {
     margin-top: 100px;
     text-align: center;
 }
 
-.pages-index-top h3 {
+.pages-top-message h3 {
     margin-bottom: 50px;
     font-size: 35px;
     text-shadow: 2px 2px 4px #363636; 
@@ -52,16 +44,6 @@
 }
 
 //Grammarページ
-
-.pages-grammar {
-    margin-top: 0px;
-    background-color: white;
-    margin-left: auto;
-    margin-right: auto;
-    height: 800px;
-    padding: 20px;
-    background-image: url("/forest.png");
-}
 
 .pages-grammar-top {
     margin-top: 100px;
