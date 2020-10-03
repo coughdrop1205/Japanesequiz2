@@ -268,9 +268,9 @@
 
 .pages-show-stock {
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     white-space: pre-line;
-    line-height: 20px;
+    line-height: 15px;
 }
 
 .pages-show-answer {
@@ -298,6 +298,17 @@
 .pages-show-explanation {
     margin-top: 15px;
     display: none;
+}
+
+.pages-show-sound {
+    margin-top: 10px;
+    display: none;
+}
+
+audio {
+    width: 165px;
+    height: 30px;
+    float: left;
 }
 
 .pages-explanation-btn {
