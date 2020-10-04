@@ -2,24 +2,31 @@ class QuizesController < ApplicationController
   def show
     @quizes = Quiz.where(genre_id: params[:genre_id]).where(subgenre_id: params[:subgenre_id]).where(thirdgenre_id: params[:thirdgenre_id]).where(level: params[:level])
     @quiz = Quiz.find_by(genre_id: params[:genre_id], subgenre_id: params[:subgenre_id], thirdgenre_id: params[:thirdgenre_id], level: params[:level], id: params[:id])
-    #if @quiz.blank?
-      #redirect_to "/quizes/#{params[:genre_id]}/#{params[:subgenre_id]}/#{params[:thirdgenre_id]}/#{params[:level]}/#{next_id}"
-    #end
-    #@quizes_array = @quizes.ids
-    #@quiz_number = @quizes_array.index{|num| num == params[:id].to_i}.to_i+1
-    #@last_quiz = @quizes.last
+    if !user_signed_in? && @quiz.level >=3
+      flash[:notice] = "Sorry, the quizes above Lv3 can be accessed by paid members only. Please sign in first!!"
+      redirect_to new_user_registration_path
+    elsif user_signed_in? && Team.find_by(user_id: current_user.id) && !Team.find_by(user_id: current_user.id).stripe_subscription_id && @quiz.level >=3
+      flash[:notice] = "Sorry, the quizes above Lv3 can be accessed by paid members only. Please restart subscription!!"
+      redirect_to card_restart_path
+    elsif user_signed_in? && !Team.find_by(user_id: current_user.id) && @quiz.level >=3
+      flash[:notice] = "Sorry, the quizes above Lv3 can be accessed by paid members only. Please be patron to access them!!"
+      redirect_to card_edit_path
+    end
   end
 
   def road
     @quizes = Quiz.where(level: params[:level]).where(theme: params[:theme])
     @quiz = Quiz.find_by(level: params[:level], theme: params[:theme], road: params[:road])
-    #if @quiz.blank?
-      #redirect_to "/quizes/#{params[:level]}/#{params[:theme]}/#{next_id}"
-    #end
-    #@quizes_array = Array.new
-    #@quizes.each do |num|
-      #@quizes_array.push(num.road.to_i)
-    #end
+    if !user_signed_in? && @quiz.level >=3
+      flash[:notice] = "Sorry, the quizes above Lv3 can be accessed by paid members only. Please sign in first!!"
+      redirect_to new_user_registration_path
+    elsif user_signed_in? && Team.find_by(user_id: current_user.id) && !Team.find_by(user_id: current_user.id).stripe_subscription_id && @quiz.level >=3
+      flash[:notice] = "Sorry, the quizes above Lv3 can be accessed by paid members only. Please restart subscription!!"
+      redirect_to card_restart_path
+    elsif user_signed_in? && !Team.find_by(user_id: current_user.id) && @quiz.level >=3
+      flash[:notice] = "Sorry, the quizes above Lv3 can be accessed by paid members only. Please be patron to access them!!"
+      redirect_to card_edit_path
+    end
   end
 
   def new

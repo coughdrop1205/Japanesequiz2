@@ -29,8 +29,10 @@ class PagesController < ApplicationController
   def grammar
     @quiz1_1 = Quiz.find_by(level:1, theme: 1, road:1)
     @quiz1_2 = Quiz.find_by(level:1, theme: 2, road:1)
-    @quiz1_3 = Quiz.find_by(level:1, theme: 3)
+    @quiz1_3 = Quiz.find_by(level:1, theme: 3, road:1)
     @quiz2_1 = Quiz.find_by(level:2, theme: 1, road:1)
+    @quiz2_2 = Quiz.find_by(level:2, theme: 2, road:1)
+    @quiz3_2 = Quiz.find_by(level:3, theme: 2, road:1)
   end
 
   def modern
