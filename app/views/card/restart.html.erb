@@ -3,6 +3,14 @@
     <h1>Restart Patron!!</h1>
         <%# ボタンを作って、押したら"/home/restart_subscription"にアクセスする %>
         <%# class: 'btn'でボタン化 %>
+        <div class="regis-new-condition">
+        <p>
+          By clicking on Restart subscription, you agree to Shares'<br>
+          <%= link_to 'Terms and Conditions',"/pages/term", class: "regis-new-term" %>
+            and 
+          <%= link_to 'Privacy policy',"/pages/privacy", class: "regis-new-privacy" %>
+        </p>
+      </div>
         <%= button_to 'Restart subscription', card_restart_subscription_path, method: :put %>
   </div>
 </div>

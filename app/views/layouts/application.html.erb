@@ -85,10 +85,13 @@
       </div>
     <% end %>
     <%= yield %>
-
     <footer>
-      <div class="footer-logo">
-        Modern Japanese
+      <div class="footer-item">
+        <ul>
+          <li> <%= link_to 'Privacy policy',"/pages/privacy", class: "footer-item" %> </li>
+          <li> <%= link_to 'Act on specified commercial transactions',"/pages/commercial", class: "footer-item" %> </li>
+          <li> <%= link_to 'Terms and Conditions',"/pages/term", class: "footer-item" %> </li>
+        <ul>
       </div>
     </footer>
   </body>

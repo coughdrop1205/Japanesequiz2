@@ -33,7 +33,7 @@ header {
 footer {
     background-color: rgb(88, 85, 85);
     width: 100%;
-    height: 40px;
+    height: 50px;
 }
 
 .header-list li a {
@@ -55,10 +55,16 @@ footer {
     float: left;
 }
 
-.footer-logo {
-    text-align: right;
+.footer-item {
+    text-align: left;
     font-size: 10px;
+    padding: 5px 0px 10px 5px;
     color: white;
+    text-decoration: none;
+}
+
+.footer-item li {
+    margin: 3px;
 }
 
 .flash {

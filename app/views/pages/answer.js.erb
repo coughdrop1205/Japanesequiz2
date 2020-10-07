@@ -4,6 +4,7 @@ var explanation = "<%=@explanation%>";
 if (explanation) {
     $(`.c${number}`).addClass('active');
     $(`.d${number}`).hide();
+    $(`.f${number}`).hide();
 } else {
     $(`.a${number}`).addClass('active');
     $(`.b${number}`).hide();

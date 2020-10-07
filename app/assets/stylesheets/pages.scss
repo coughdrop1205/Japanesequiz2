@@ -306,6 +306,18 @@ audio {
     border-radius: 8px;
 }
 
+.pages-explanation-btn2 {
+    display: inline-block;
+    margin: 0px 0px 0px 200px;
+    text-align: right;
+    font-size: 15px;
+    color: white;
+    border: none;
+    padding: 3px 6px;
+    background-color: rgba(61, 218, 166, 0.836);
+    border-radius: 8px;
+}
+
 .pages-show-change {
     list-style: none;
 }
@@ -322,4 +334,46 @@ audio {
 
 .active2 {
     display: inline-block;
+}
+
+//プライバシーポリシー
+
+.pages-privacy-title h1 {
+    font-size: 20px;
+}
+
+.pages-privacy-content p {
+    margin: 10px auto;
+    text-align: left;
+}
+
+.pages-privacy-subtitle {
+    text-align: left;
+}
+
+//特定商取引法に基づく表記
+
+.pages-commircial-title h1 {
+    font-size: 20px;
+}
+
+.pages-commircial-items td {
+    text-align: left;
+    padding-top: 30px;
+    padding-right: 10px;
+}
+
+//利用規約
+
+.pages-term-title h1 {
+    font-size: 20px;
+}
+
+.pages-term-content p {
+    margin: 10px auto;
+    text-align: left;
+}
+
+.pages-term-subtitle {
+    text-align: left;
 }

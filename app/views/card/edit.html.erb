@@ -22,6 +22,14 @@
         <!-- Used to display form errors. -->
         <div id="card-errors" role="alert"></div>
       </div>
+      <div class="regis-new-condition">
+        <p>
+          By clicking on Start subscription, you agree to Shares'<br>
+          <%= link_to 'Terms and Conditions',"/pages/term", class: "regis-new-term" %>
+            and 
+          <%= link_to 'Privacy policy',"/pages/privacy", class: "regis-new-privacy" %>
+        </p>
+      </div>
         <button>Start subscription</button>
     </form>
   </div>

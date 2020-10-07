@@ -29,13 +29,17 @@
                                 <p><%= quiz.correct_answer %></p>
                             </div>
                             <!-- 回答表示のボタン -->
-                            <input class="pages-show-btn b<%= i %>" type="submit" name="answer" value="A">
+                            <% if !quiz.correct_answer.blank? %>
+                                <input class="pages-show-btn b<%= i %>" type="submit" name="answer" value="A">
+                            <% end %>
                             <!-- 解説表示 -->
                             <div class="pages-show-explanation c<%= i %>">
                                 <p><%= quiz.explanation %></p>
                             </div>
                             <!-- 解説表示のボタン -->
-                            <% if !quiz.explanation.blank? %>
+                            <% if !quiz.explanation.blank? && quiz.correct_answer.blank? %>
+                                <input class="pages-explanation-btn2 f<%= i %>" type="submit" name="explanation" value="E">
+                            <% elsif !quiz.explanation.blank? %>
                                 <input class="pages-explanation-btn d<%= i %>" type="submit" name="explanation" value="E">
                             <% end %>
                             <!-- 音声 -->

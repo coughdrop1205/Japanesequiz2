@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
   get 'pages/show'
+  get 'pages/privacy'
+  get 'pages/commercial'
+  get 'pages/term'
   get 'pages/grammar' => "pages#grammar"
   get 'pages/modern' => "pages#modern"
 
