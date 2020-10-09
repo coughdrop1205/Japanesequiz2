@@ -33,6 +33,9 @@ class PagesController < ApplicationController
     @quiz2_1 = Quiz.find_by(level:2, theme: 1, road:1)
     @quiz2_2 = Quiz.find_by(level:2, theme: 2, road:1)
     @quiz3_2 = Quiz.find_by(level:3, theme: 2, road:1)
+    @quiz4_2 = Quiz.find_by(level:4, theme: 2, road:1)
+    @quiz5_2 = Quiz.find_by(level:5, theme: 2, road:1)
+    @quiz6_2 = Quiz.find_by(level:6, theme: 2, road:1)
   end
 
   def modern

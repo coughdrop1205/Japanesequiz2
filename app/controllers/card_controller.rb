@@ -167,7 +167,7 @@ class CardController < ApplicationController
         end
 
         # 月額課金をキャンセルしたので別画面に飛ばす
-        render "card/fin_subscription"
+        render "card/cancel_subscription"
 
       # エラー(バリデーション)が出た場合の処理
       rescue ActiveRecord::RecordInvalid => e

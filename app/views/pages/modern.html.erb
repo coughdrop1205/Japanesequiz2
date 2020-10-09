@@ -63,18 +63,18 @@
         <!-- Adjective -->
         <div class="pages-modern-quiz">
             <div class="pages-modern-title">
-                <%= @genre5[0].subgenre %>
+                <%# <%= @genre5[0].subgenre %>
             </div>
             <div class="pages-modern-subwrapper">
                 <div class="pages-modern-subtitle">
                     <% if @genre5[0].thirdgenre %>
-                        <%= @genre5[0].thirdgenre %>
+                        <%# <%= @genre5[0].thirdgenre %>
                     <% end %>
                 </div>
                 <div class="pages-modern-level">
                     <% @genre5.each_with_index do |genre, i| %>
                         <% @quiz = Quiz.find_by(subgenre_id: genre.sub_id, thirdgenre_id: genre.third_id, level: genre.level) %>
-                            <%= link_to("Lv.#{genre.level}", "/quizes/a/#{genre.sub_id}/#{genre.third_id}/#{genre.level}/#{@quiz.id}", {class: "pages-modern-btn l#{genre.level}"}) %>
+                            <%# <%= link_to("Lv.#{genre.level}", "/quizes/a/#{genre.sub_id}/#{genre.third_id}/#{genre.level}/#{@quiz.id}", {class: "pages-modern-btn l#{genre.level}"}) %>
                     <% end %>
                 </div>
             </div>
@@ -131,18 +131,18 @@
         <!-- Verb -->
         <div class="pages-modern-quiz">
             <div class="pages-modern-title">
-                <%= @genre8[0].subgenre %>
+                <%# <%= @genre8[0].subgenre %>
             </div>
             <div class="pages-modern-subwrapper">
                 <div class="pages-modern-subtitle">
                     <% if @genre8[0].thirdgenre %>
-                        <%= @genre8[0].thirdgenre %>
+                        <%# <%= @genre8[0].thirdgenre %>
                     <% end %>
                 </div>
                 <div class="pages-modern-level">
                     <% @genre8.each_with_index do |genre, i| %>
                         <% @quiz = Quiz.find_by(subgenre_id: genre.sub_id, thirdgenre_id: genre.third_id, level: genre.level) %>
-                        <%= link_to("Lv.#{genre.level}", "/quizes/a/#{genre.sub_id}/#{genre.third_id}/#{genre.level}/#{@quiz.id}", {class: "pages-modern-btn l#{genre.level}"}) %>
+                        <%# <%= link_to("Lv.#{genre.level}", "/quizes/a/#{genre.sub_id}/#{genre.third_id}/#{genre.level}/#{@quiz.id}", {class: "pages-modern-btn l#{genre.level}"}) %>
                     <% end %>
                 </div>
             </div>

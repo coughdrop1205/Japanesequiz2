@@ -44,18 +44,18 @@
         <%= f.submit "Update" %>
       </div>
     <% end %>
-
-    <div class="regis-edit-title2">
-      <h3>Cancel my account</h3>
-    </div>
     <div class="regis-edit-field">
-      <p>Unhappy? 
         <% if Team.find_by(user_id: current_user.id) && Team.find_by(user_id: current_user.id).stripe_subscription_id %>
-          <%= button_to '月額課金キャンセル', card_cancel_subscription_path, method: :put %>
+          <div class="regis-edit-title2">
+            <h3>You want to quit patron??</h3>
+          </div>
+          <%= button_to 'Cancel subscription', card_cancel_subscription_path, method: :put %>
         <% else %>
+          <div class="regis-edit-title2">
+            <h3>Cancel account</h3>
+          </div>
           <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
         <% end %>
-      </p>
     </div>
     <%= link_to "Back", :back %>
   </div>
