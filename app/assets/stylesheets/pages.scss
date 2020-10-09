@@ -127,11 +127,6 @@
     margin: 0px auto 0px auto;
 }
 
-.pages-modern-level p {
-    text-align: center;
-    margin-right: 320px;
-}
-
 .pages-modern-genre ul li {
     display: block;
     text-align: center;
@@ -166,7 +161,15 @@
     clear: both;
 }
 
+.pages-modern-level {
+    text-align: center;
+    width: 320px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .pages-modern-btn {
+    flex-basis: 50px;
     display: inline-block;
     float: left;
     text-align: center;
