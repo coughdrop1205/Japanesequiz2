@@ -3,13 +3,13 @@ class QuizesController < ApplicationController
     @quizes = Quiz.where(genre_id: params[:genre_id]).where(subgenre_id: params[:subgenre_id]).where(thirdgenre_id: params[:thirdgenre_id]).where(level: params[:level])
     @quiz = Quiz.find_by(genre_id: params[:genre_id], subgenre_id: params[:subgenre_id], thirdgenre_id: params[:thirdgenre_id], level: params[:level], id: params[:id])
     if !user_signed_in? && @quiz.level >=3
-      flash[:notice] = "Sorry, the quizes above Lv3 can be accessed by paid members only. Please sign in first!!"
+      flash[:notice] = "Sorry, the quizes above Lv3 can be accessed by members only. Please sign up!!"
       redirect_to new_user_registration_path
-    elsif user_signed_in? && Team.find_by(user_id: current_user.id) && !Team.find_by(user_id: current_user.id).stripe_subscription_id && @quiz.level >=3
-      flash[:notice] = "Sorry, the quizes above Lv3 can be accessed by paid members only. Please restart subscription!!"
+    elsif user_signed_in? && Team.find_by(user_id: current_user.id) && !Team.find_by(user_id: current_user.id).stripe_subscription_id && @quiz.level >=5
+      flash[:notice] = "Sorry, the quizes above Lv5 can be accessed by members only. Please restart subscription !!"
       redirect_to card_restart_path
-    elsif user_signed_in? && !Team.find_by(user_id: current_user.id) && @quiz.level >=3
-      flash[:notice] = "Sorry, the quizes above Lv3 can be accessed by paid members only. Please be patron to access them!!"
+    elsif user_signed_in? && !Team.find_by(user_id: current_user.id) && @quiz.level >=５
+      flash[:notice] = "Sorry, the quizes above Lv5 can be accessed by paid members only. Please be patron to access them!!"
       redirect_to card_edit_path
     end
   end
@@ -18,13 +18,13 @@ class QuizesController < ApplicationController
     @quizes = Quiz.where(level: params[:level]).where(theme: params[:theme])
     @quiz = Quiz.find_by(level: params[:level], theme: params[:theme], road: params[:road])
     if !user_signed_in? && @quiz.level >=3
-      flash[:notice] = "Sorry, the quizes above Lv3 can be accessed by paid members only. Please sign in first!!"
+      flash[:notice] = "Sorry, the quizes above Lv3 can be accessed by members only. Please sign up!!"
       redirect_to new_user_registration_path
-    elsif user_signed_in? && Team.find_by(user_id: current_user.id) && !Team.find_by(user_id: current_user.id).stripe_subscription_id && @quiz.level >=3
-      flash[:notice] = "Sorry, the quizes above Lv3 can be accessed by paid members only. Please restart subscription!!"
+    elsif user_signed_in? && Team.find_by(user_id: current_user.id) && !Team.find_by(user_id: current_user.id).stripe_subscription_id && @quiz.level >=5
+      flash[:notice] = "Sorry, the quizes above Lv5 can be accessed by paid members only. Please restart subscription!!"
       redirect_to card_restart_path
-    elsif user_signed_in? && !Team.find_by(user_id: current_user.id) && @quiz.level >=3
-      flash[:notice] = "Sorry, the quizes above Lv3 can be accessed by paid members only. Please be patron to access them!!"
+    elsif user_signed_in? && !Team.find_by(user_id: current_user.id) && @quiz.level >=5
+      flash[:notice] = "Sorry, the quizes above Lv5 can be accessed by paid members only. Please be patron to access them!!"
       redirect_to card_edit_path
     end
   end
