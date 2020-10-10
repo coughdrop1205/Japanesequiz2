@@ -8,7 +8,7 @@ class QuizesController < ApplicationController
     elsif user_signed_in? && Team.find_by(user_id: current_user.id) && !Team.find_by(user_id: current_user.id).stripe_subscription_id && @quiz.level >=5
       flash[:notice] = "Sorry, the quizes above Lv5 can be accessed by members only. Please restart subscription !!"
       redirect_to card_restart_path
-    elsif user_signed_in? && !Team.find_by(user_id: current_user.id) && @quiz.level >=５
+    elsif user_signed_in? && !Team.find_by(user_id: current_user.id) && @quiz.level >=5
       flash[:notice] = "Sorry, the quizes above Lv5 can be accessed by paid members only. Please be patron to access them!!"
       redirect_to card_edit_path
     end
