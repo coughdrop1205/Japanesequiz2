@@ -1,9 +1,3 @@
-User.create!([
-  {email: "rqis.ti1205@gmail.com", encrypted_password: "$2a$12$ApSidG/opLRIsj6XyaY21eq90D1t1Jfi12qiWW3DXMdovHMEpj2Pe", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil, confirmation_token: "B9ehs9L7czVzXQqDPawM", confirmed_at: "2020-09-30 02:17:14", confirmation_sent_at: "2020-09-05 11:00:06", unconfirmed_email: nil, failed_attempts: 0, unlock_token: nil, locked_at: nil, provider: "facebook", uid: "3049713258491276", username: nil},
-  {email: "rqisti1205@yahoo.co.jp", encrypted_password: "$2a$12$t38RFlAOmHNZKAuMdJtgd.l72EqC0sPLevdw90NEph1BbynoG0PFO", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil, confirmation_token: "PAzAXCWXpoZfb-fb6Xy8", confirmed_at: nil, confirmation_sent_at: "2020-10-09 08:29:18", unconfirmed_email: nil, failed_attempts: 0, unlock_token: nil, locked_at: nil, provider: nil, uid: nil, username: "aaaaaa"},
-  {email: "blowthatsmoke6@gmail.com", encrypted_password: "$2a$12$YftrDekEBpQIdgYTYR9k.eXzdXoDxvdihHBg/6f5aiMrugvtCDaTO", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil, confirmation_token: "tzQdCQ9oNtGmtnzb-iKc", confirmed_at: nil, confirmation_sent_at: "2020-10-09 08:30:10", unconfirmed_email: nil, failed_attempts: 0, unlock_token: nil, locked_at: nil, provider: nil, uid: nil, username: "aaaaaa"},
-  {email: "earlobe888@gmail.com", encrypted_password: "$2a$12$jjiaGNTI/EgqHETsf5951OJ3.FWOFgoTzvTYwj9kBzZcYSkG7zepS", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil, confirmation_token: "rqmBzb6s1uRTm3h5Mq23", confirmed_at: "2020-10-12 08:46:45", confirmation_sent_at: "2020-10-12 08:46:22", unconfirmed_email: nil, failed_attempts: 0, unlock_token: nil, locked_at: nil, provider: nil, uid: nil, username: "aaaaaa"}
-])
 Subgenre.create!([
   {sub_id: 0, subgenre: "None", third_id: 0, thirdgenre: "", level: 1},
   {sub_id: 1, subgenre: "Nature", third_id: 0, thirdgenre: "", level: 1},
@@ -37,88 +31,6 @@ Subgenre.create!([
   {sub_id: 13, subgenre: "Body parts", third_id: 0, thirdgenre: "", level: 2},
   {sub_id: 13, subgenre: "Body parts", third_id: 0, thirdgenre: "", level: 3},
   {sub_id: 13, subgenre: "Body parts", third_id: 0, thirdgenre: "", level: 4}
-])
-Stock.create!([
-  {user_id: 1, quiz_id: 138},
-  {user_id: 1, quiz_id: 350},
-  {user_id: 1, quiz_id: 1},
-  {user_id: 1, quiz_id: 4},
-  {user_id: 1, quiz_id: 6},
-  {user_id: 1, quiz_id: 8},
-  {user_id: 1, quiz_id: 9},
-  {user_id: 1, quiz_id: 10},
-  {user_id: 1, quiz_id: 11},
-  {user_id: 1, quiz_id: 12},
-  {user_id: 1, quiz_id: 13},
-  {user_id: 1, quiz_id: 14},
-  {user_id: 1, quiz_id: 16},
-  {user_id: 1, quiz_id: 17},
-  {user_id: 1, quiz_id: 18},
-  {user_id: 1, quiz_id: 19},
-  {user_id: 1, quiz_id: 20},
-  {user_id: 1, quiz_id: 21},
-  {user_id: 1, quiz_id: 22},
-  {user_id: 1, quiz_id: 23},
-  {user_id: 7, quiz_id: 290},
-  {user_id: 7, quiz_id: 291},
-  {user_id: 7, quiz_id: 292},
-  {user_id: 7, quiz_id: 293},
-  {user_id: 7, quiz_id: 294},
-  {user_id: 7, quiz_id: 295},
-  {user_id: 7, quiz_id: 296},
-  {user_id: 7, quiz_id: 298},
-  {user_id: 7, quiz_id: 299},
-  {user_id: 7, quiz_id: 300},
-  {user_id: 7, quiz_id: 301},
-  {user_id: 7, quiz_id: 302},
-  {user_id: 7, quiz_id: 303},
-  {user_id: 7, quiz_id: 304},
-  {user_id: 7, quiz_id: 305},
-  {user_id: 7, quiz_id: 306},
-  {user_id: 7, quiz_id: 133},
-  {user_id: 7, quiz_id: 134},
-  {user_id: 7, quiz_id: 135},
-  {user_id: 7, quiz_id: 136},
-  {user_id: 7, quiz_id: 137},
-  {user_id: 7, quiz_id: 138},
-  {user_id: 7, quiz_id: 139},
-  {user_id: 7, quiz_id: 140},
-  {user_id: 7, quiz_id: 141},
-  {user_id: 7, quiz_id: 142},
-  {user_id: 7, quiz_id: 33},
-  {user_id: 7, quiz_id: 34},
-  {user_id: 7, quiz_id: 35},
-  {user_id: 7, quiz_id: 36},
-  {user_id: 8, quiz_id: 58},
-  {user_id: 8, quiz_id: 132},
-  {user_id: 8, quiz_id: 351},
-  {user_id: 8, quiz_id: 163},
-  {user_id: 8, quiz_id: 164},
-  {user_id: 8, quiz_id: 165},
-  {user_id: 8, quiz_id: 166},
-  {user_id: 8, quiz_id: 133},
-  {user_id: 8, quiz_id: 134},
-  {user_id: 8, quiz_id: 135},
-  {user_id: 8, quiz_id: 136},
-  {user_id: 1, quiz_id: 326},
-  {user_id: 8, quiz_id: 363},
-  {user_id: 8, quiz_id: 361},
-  {user_id: 8, quiz_id: 404},
-  {user_id: 8, quiz_id: 323},
-  {user_id: 8, quiz_id: 324},
-  {user_id: 8, quiz_id: 360},
-  {user_id: 8, quiz_id: 321},
-  {user_id: 8, quiz_id: 441}
-])
-Team.create!([
-  {plan_id: "price_1HWwCBCMBVmJcMWXgf9XDNoQ", user_id: 1, stripe_card_id: "tok_1HWwEnCMBVmJcMWXHCP0JK7g", stripe_customer_id: "cus_I7AZC3SYRQGhqK", stripe_subscription_id: "sub_IBJsGubTioeGfi", active_until: "2020-10-11 05:36:45"},
-  {plan_id: nil, user_id: 7, stripe_card_id: "tok_1HXeeRCMBVmJcMWXNqwAnUVF", stripe_customer_id: "cus_I7uT1Ia8xDZNoy", stripe_subscription_id: nil, active_until: "2020-10-02 03:20:16"},
-  {plan_id: "price_1HWwCBCMBVmJcMWXgf9XDNoQ", user_id: 7, stripe_card_id: "tok_1HXeeQCMBVmJcMWXOeN4QJru", stripe_customer_id: "cus_I7uTAwSEAQ4TIM", stripe_subscription_id: "sub_I7uTofCL3m32Tq", active_until: "2020-10-02 03:09:45"},
-  {plan_id: nil, user_id: 8, stripe_card_id: "tok_1HXewSCMBVmJcMWXCoczWgSz", stripe_customer_id: "cus_I7ummZ2Q8W3FwK", stripe_subscription_id: nil, active_until: "2020-10-09 08:27:16"},
-  {plan_id: nil, user_id: 9, stripe_card_id: "tok_1HZq6RCMBVmJcMWXJsyhOhXp", stripe_customer_id: "cus_IAARuKkYRppT2b", stripe_subscription_id: nil, active_until: "2020-10-08 04:22:38"},
-  {plan_id: "price_1HWwCBCMBVmJcMWXgf9XDNoQ", user_id: 9, stripe_card_id: "tok_1HZqA3CMBVmJcMWX4wrguZqB", stripe_customer_id: "cus_IAAVOujxlTcDZ5", stripe_subscription_id: "sub_IAAVmR9YY5CwB1", active_until: "2020-10-08 03:51:26"},
-  {plan_id: "price_1HWwCBCMBVmJcMWXgf9XDNoQ", user_id: 9, stripe_card_id: "tok_1HZqBwCMBVmJcMWXJU1KWhY2", stripe_customer_id: "cus_IAAXNHzangZj1L", stripe_subscription_id: "sub_IAAXji6F5Wfip5", active_until: "2020-10-08 03:53:22"},
-  {plan_id: "price_1HWwCBCMBVmJcMWXgf9XDNoQ", user_id: 9, stripe_card_id: "tok_1HZqDWCMBVmJcMWXk7Y0eKjd", stripe_customer_id: "cus_IAAYp1YgLIwFa1", stripe_subscription_id: "sub_IAAYOTrVdtXT6t", active_until: "2020-10-08 03:55:00"}
 ])
 Quiz.create!([
   {genre_id: "a", subgenre_id: 1, thirdgenre_id: 0, level: 1, theme: 0, road: 0, content: "What is \"Water\" in Japanese?", correct_answer: "水 (みず)", a: "山 (やま)", b: "水 (みず)", c: "土 (つち)", explanation: "", image_name: "", audio: "みす.mp3"},
@@ -695,7 +607,4 @@ Quiz.create!([
   {genre_id: "a", subgenre_id: 5, thirdgenre_id: 0, level: 6, theme: 2, road: 7, content: "How do you say \"You are not smart\" using the word かしこい in polite way?\nあなた_____。", correct_answer: "かしこくなくはないね", a: "かしこくなくはないね", b: "かしこいなくはないの", c: "かしこくなくはないぬ", explanation: "", image_name: "", audio: ""},
   {genre_id: "a", subgenre_id: 5, thirdgenre_id: 0, level: 6, theme: 2, road: 8, content: "How do you say \"They are not quiet\" using the word うるさい in polite way?\nかれら_____。", correct_answer: "うるさくなくはないね", a: "うるさいなくはないね", b: "うるさくなくはないね", c: "うるさくないないね", explanation: "", image_name: "", audio: ""},
   {genre_id: "genre_id", subgenre_id: 0, thirdgenre_id: 0, level: 0, theme: 0, road: 0, content: "content", correct_answer: "correct_answer", a: "a", b: "b", c: "c", explanation: "explanation", image_name: "image_name", audio: "audio"}
-])
-Plan.create!([
-  {stripe_plan_id: "price_1HWwCBCMBVmJcMWXgf9XDNoQ", name: "P Plan", amount: 1000, currency: "jpy", interval: "month"}
 ])
