@@ -1,58 +1,35 @@
 <div class="main clearfix">
     <div class="pages-top-message">
-        <h3>This is the place to master Grammar of Japanese !! If you are a beginner, it's recommended to start from Level 1</h3>
+        <h3>This is the place to master Vocabulary of Japanese !!</br>Please select the genre and start the quizzes!!</h3>
     </div>
-    <div class="pages-grammar-wrapper">
-        <div class="pages-grammar-level">
-            <p>Level 1</p>
+    <div class="pages-modern-wrapper">
+        <!-- Pronoun -->
+        <div class="pages-modern-quiz">
+            <div class="pages-modern-title">
+                Pronoun
+            </div>
+            <div class="pages-modern-subwrapper">
+                <div class="pages-modern-level">
+                    <%= link_to("Lv1", "/quizes/#{@quiz1_1.level}/#{@quiz1_1.theme}/#{@quiz1_1.road}", {class: "pages-modern-btn l1"}) %>
+                    <%= link_to("Lv2", "/quizes/#{@quiz1_2.level}/#{@quiz1_2.theme}/#{@quiz1_2.road}", {class: "pages-modern-btn l2"}) %>
+                </div>
+            </div>
         </div>
-        <div class="pages-grammar-genre">
-            <ul>
-                <li> <%= link_to("Pronoun", "/quizes/#{@quiz1_1.level}/#{@quiz1_1.theme}/#{@quiz1_1.road}", {class: "pages-grammar-btn"}) %> </li>
-                <li> <%= link_to("Adjective", "/quizes/#{@quiz1_2.level}/#{@quiz1_2.theme}/#{@quiz1_2.road}", {class: "pages-grammar-btn"}) %> </li>
-                <%# <li> <%= link_to("Verb", "/quizes/#{@quiz1_3.level}/#{@quiz1_3.theme}/#{@quiz1_3.road}", {class: "pages-grammar-btn"}) %> </li>
-            </ul>
-        </div>
-        <div class="pages-grammar-level">
-            <p>Level 2</p>
-        </div>
-        <div class="pages-grammar-genre">
-            <ul>
-                <li> <%= link_to("Pronoun", "/quizes/#{@quiz2_1.level}/#{@quiz2_1.theme}/#{@quiz2_1.road}", {class: "pages-grammar-btn"}) %> </li>
-                <li> <%= link_to("Adjective", "/quizes/#{@quiz2_2.level}/#{@quiz2_2.theme}/#{@quiz2_2.road}", {class: "pages-grammar-btn"}) %> </li>
-            </ul>
-        </div>
-        <div class="pages-grammar-level">
-            <p>Level 3</p>
-        </div>
-        <div class="pages-grammar-genre">
-            <ul>
-                <li> <%= link_to("Adjective", "/quizes/#{@quiz3_2.level}/#{@quiz3_2.theme}/#{@quiz3_2.road}", {class: "pages-grammar-btn"}) %> </li>
-            </ul>
-        </div>
-        <div class="pages-grammar-level">
-            <p>Level 4</p>
-        </div>
-        <div class="pages-grammar-genre">
-            <ul>
-                <li> <%= link_to("Adjective", "/quizes/#{@quiz4_2.level}/#{@quiz4_2.theme}/#{@quiz4_2.road}", {class: "pages-grammar-btn"}) %> </li>
-            </ul>
-        </div>
-        <div class="pages-grammar-level">
-            <p>Level 5</p>
-        </div>
-        <div class="pages-grammar-genre">
-            <ul>
-                <li> <%= link_to("Adjective", "/quizes/#{@quiz5_2.level}/#{@quiz5_2.theme}/#{@quiz5_2.road}", {class: "pages-grammar-btn"}) %> </li>
-            </ul>
-        </div>
-        <div class="pages-grammar-level">
-            <p>Level 6</p>
-        </div>
-        <div class="pages-grammar-genre">
-            <ul>
-                <li> <%= link_to("Adjective", "/quizes/#{@quiz6_2.level}/#{@quiz6_2.theme}/#{@quiz6_2.road}", {class: "pages-grammar-btn"}) %> </li>
-            </ul>
+        <!-- Adjective -->
+        <div class="pages-modern-quiz">
+            <div class="pages-modern-title">
+                Adjective
+            </div>
+            <div class="pages-modern-subwrapper">
+                <div class="pages-modern-level">
+                    <%= link_to("Lv1", "/quizes/#{@quiz2_1.level}/#{@quiz2_1.theme}/#{@quiz2_1.road}", {class: "pages-modern-btn l1"}) %>
+                    <%= link_to("Lv2", "/quizes/#{@quiz2_2.level}/#{@quiz2_2.theme}/#{@quiz2_2.road}", {class: "pages-modern-btn l2"}) %>
+                    <%= link_to("Lv3", "/quizes/#{@quiz2_3.level}/#{@quiz2_3.theme}/#{@quiz2_3.road}", {class: "pages-modern-btn l3"}) %>
+                    <%= link_to("Lv4", "/quizes/#{@quiz2_4.level}/#{@quiz2_4.theme}/#{@quiz2_4.road}", {class: "pages-modern-btn l4"}) %>
+                    <%= link_to("Lv5", "/quizes/#{@quiz2_5.level}/#{@quiz2_5.theme}/#{@quiz2_5.road}", {class: "pages-modern-btn l5"}) %>
+                    <%= link_to("Lv6", "/quizes/#{@quiz2_6.level}/#{@quiz2_6.theme}/#{@quiz2_6.road}", {class: "pages-modern-btn l6"}) %>
+                </div>
+            </div>
         </div>
     </div>
 </div>

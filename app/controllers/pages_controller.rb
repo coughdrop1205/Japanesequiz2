@@ -27,15 +27,15 @@ class PagesController < ApplicationController
   end
 
   def grammar
-    @quiz1_1 = Quiz.find_by(level:1, theme: 1, road:1)
-    @quiz1_2 = Quiz.find_by(level:1, theme: 2, road:1)
-    @quiz1_3 = Quiz.find_by(level:1, theme: 3, road:1)
-    @quiz2_1 = Quiz.find_by(level:2, theme: 1, road:1)
-    @quiz2_2 = Quiz.find_by(level:2, theme: 2, road:1)
-    @quiz3_2 = Quiz.find_by(level:3, theme: 2, road:1)
-    @quiz4_2 = Quiz.find_by(level:4, theme: 2, road:1)
-    @quiz5_2 = Quiz.find_by(level:5, theme: 2, road:1)
-    @quiz6_2 = Quiz.find_by(level:6, theme: 2, road:1)
+    @quiz1_1 = Quiz.find_by(theme:1, level: 1, road:1)
+    @quiz1_2 = Quiz.find_by(theme:1, level: 2, road:1)
+    @quiz2_1 = Quiz.find_by(theme:2, level: 1, road:1)
+    @quiz2_2 = Quiz.find_by(theme:2, level: 2, road:1)
+    @quiz2_3 = Quiz.find_by(theme:2, level: 3, road:1)
+    @quiz2_4 = Quiz.find_by(theme:2, level: 4, road:1)
+    @quiz2_5 = Quiz.find_by(theme:2, level: 5, road:1)
+    @quiz2_6 = Quiz.find_by(theme:2, level: 6, road:1)
+    @quiz3_1 = Quiz.find_by(theme:3, level: 1, road:1)
   end
 
   def modern
