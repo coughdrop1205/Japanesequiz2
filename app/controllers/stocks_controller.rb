@@ -9,7 +9,7 @@ class StocksController < ApplicationController
       @stocks = Stock.where(user_id: current_user.id)
       
       #有料会員でストック数が200未満の時
-      if Team.find_by(user_id: current_user.id).stripe_subscription_id && @stocks.length < 200
+      if Team.find_by(user_id: current_user.id).stripe_subscription_id.present? && @stocks.length < 200
         @stock.save
         if @quiz.road <= 0
           redirect_to("/quizes/#{@quiz.genre_id}/#{@quiz.subgenre_id}/#{@quiz.thirdgenre_id}/#{@quiz.level}/#{@quiz.id}")

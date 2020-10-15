@@ -2,7 +2,9 @@
     <div class="main-top clearfix">
         <% if !@quiz.correct_answer.blank? %>
             <!-- タイトルの表示 -->
-            <h2><%= "Quiz #{@quizes.index(@quiz).to_i+1} / #{@quizes.length}" %></h2>
+            <div class="quiz-show-title">
+                <h2><%= "Quiz #{@quizes.index(@quiz).to_i+1} / #{@quizes.length}" %></h2>
+            </div>
             <!-- Stockの表示 -->
             <div class="quizes-show-stock">
                 <% if current_user && Stock.find_by(user_id: current_user.id, quiz_id: @quiz.id) %>
@@ -10,6 +12,9 @@
                         <span class="fa fa-star fa-lg like-btn-unlike"></span>
                     <% end %>
                 <% else %>
+                    <div class="quizes-show-stock-message">
+                        Add to favorite
+                    </div>
                     <%= link_to("/stocks/#{@quiz.id}/create", {method: "post"}) do %>
                         <span class="fa fa-star fa-lg like-btn"></span>
                     <% end %>

@@ -5,17 +5,28 @@
 
 //クイズ表示
 
+.quiz-show-title h2 {
+    float: left;
+}
+
 .quizes-show-stock {
     text-align: right;
 }
 
+.quizes-show-stock-message {
+    font-size: 5px;
+    color: rgb(240, 136, 1);
+    font-weight: bolder;
+    display: inline-block;
+}
+
 .like-btn {
-    margin-right: 25px;
+    text-align: right;
     color: #8899a6;
 }
 
 .like-btn-unlike {
-    margin-right: 25px;
+    text-align: right;
     color: #fac002;
 }
 
@@ -26,7 +37,7 @@
 }
 
 .quizes-show-quiz-content {
-    margin: 5px 0px;
+    margin: 15px auto 5px auto;
     font-size: 17px;
     font-weight: 500;
     line-height: 30px;
