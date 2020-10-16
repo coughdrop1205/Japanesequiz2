@@ -58,7 +58,7 @@ gem 'dotenv-rails'
 #Devise
 gem 'devise'
 gem 'omniauth-twitter'
-gem 'omniauth-google-oauth2'
+gem 'omniauth-google-oauth2', '= 0.5.4'
 
 #audiojs-rails
 gem 'audiojs-rails'
@@ -85,5 +85,3 @@ gem 'bootstrap','~> 4.1.3'
 
 #jquery
 gem 'jquery-rails'
-
-
