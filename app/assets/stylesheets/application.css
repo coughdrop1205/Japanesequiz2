@@ -37,11 +37,34 @@ footer {
 }
 
 .header-list li a {
+    border: 0.5px solid;
+    border-color: rgba(122, 122, 122, 0.699);
+    background-color: rgba(255, 255, 255, 0.932);
     color:rgb(0, 85, 57);
     list-style: none;
     text-decoration: none;
     float: right;
     padding: 15px 10px;
+    width: 100%;
+    text-align: right;
+}
+
+.header-list {
+    display: none;
+    width: 100%;
+}
+
+.menu-icon {
+    display: inline-block;
+    float: right;
+    padding: 15px 10px;
+}
+
+.is-active {
+    display: inline-block;
+    float: right;
+    font-weight: bolder;
+    background-color:rgba(255,255,255,0.6);
 }
 
 .header-logo a {

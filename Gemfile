@@ -85,3 +85,5 @@ gem 'bootstrap','~> 4.1.3'
 
 #jquery
 gem 'jquery-rails'
+
+gem 'rspec-rails'
