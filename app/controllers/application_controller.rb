@@ -2,15 +2,15 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
  #protect_from_forgery with: :null_session
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :redirect_www
+  # before_action :redirect_www
   
- def redirect_www
-  @url = request.url
-  if @url.include?('www.')
-    @url = @url.delete('www.')
-    redirect_to("#{@url}")
-  end
- end
+#  def redirect_www
+#   @url = request.url
+#   if @url.include?('www.')
+#     @url = @url.delete('www.')
+#     redirect_to("#{@url}")
+#   end
+#  end
 
  def after_sign_in_path_for(resource)
   pages_show_path
