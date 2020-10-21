@@ -11,21 +11,21 @@
 # Features
  
 ・ajaxを使用したクイズの正解・不正解表示機能
-・クイズお気に入り登録及び登録解除機能
-・音声再生機能
-・Google, Twitter, FacebookのOauth認証を使用したログイン機能
-・会員のステータスごとに受けられるクイズのレベルを変更している
-(非会員→Lv2まで、無料会員→Lv4まで、有料会員→すべて)
-・Stripeを使用したサブスクリプション決済機能
-・Twitterシェア機能
+<br>・クイズお気に入り登録及び登録解除機能
+<br>・音声再生機能
+<br>・Google, Twitter, FacebookのOauth認証を使用したログイン機能
+<br>・会員のステータスごとに受けられるクイズのレベルを変更している
+<br>(非会員→Lv2まで、無料会員→Lv4まで、有料会員→すべて)
+<br>・Stripeを使用したサブスクリプション決済機能
+<br>・Twitterシェア機能
  
 # Requirement
 
 HTML/CSS/JavaScript/jQuery
-ruby 2.6.3
-Ruby on Rails 6.0.3.4
-my sql 8.0.21
-Mac OS Catalina 10.15.4
-node v14.6.0
-yarn 1.22.4
-git version 2.24.3 (Apple Git-128)
+<br>ruby 2.6.3
+<br>Ruby on Rails 6.0.3.4
+<br>my sql 8.0.21
+<br>Mac OS Catalina 10.15.4
+<br>node v14.6.0
+<br>yarn 1.22.4
+<br>git version 2.24.3 (Apple Git-128)
